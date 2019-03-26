@@ -2,7 +2,7 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="Funcion sumar ejemplo 1" />
+		<Option title="funcionSumar" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
@@ -31,7 +31,10 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="main.c">
+		<Unit filename="funcionSumar1.c">
+			<Option compilerVar="CC" />
+		</Unit>
+		<Unit filename="funcionSumar2.c">
 			<Option compilerVar="CC" />
 		</Unit>
 		<Extensions>
