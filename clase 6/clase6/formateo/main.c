@@ -26,18 +26,7 @@ int main()
             cont++;
     }
 
-
-
-
     puts(ncomp);
-
-
-
-
-
-
-
-
 
     return 0;
 }

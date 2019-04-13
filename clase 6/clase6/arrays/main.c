@@ -70,26 +70,14 @@ int main()
         }
 
 
-
     }
 
 */
 
     for(int i=0; i < TAM;  i++)
     {
-
-
         printf("%15s   %d      %c      %d\n", nombres[i], legajos[i], sexos[i], edades[i]);
-
-
     }
-
-
-
-
-
-
-
 
 
     return 0;
