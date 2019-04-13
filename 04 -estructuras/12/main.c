@@ -21,7 +21,7 @@ void mostrarEmpleado(Eempleado emp);
 void inicializarEmpleados(Eempleado vec[], int tam);
 void mostrarEmpleados(Eempleado vec[], int tam);
 void altaEmpleado(Eempleado vec[], int tam);
-
+void altaEmpleado(Eempleado vec[], int tam);
 
 int main()
 {
@@ -36,7 +36,8 @@ int main()
         switch(menuOpciones())
         {
             case 1:
-                printf("\nAlta empleado\n");
+          //   printf("\nAlta empleado\n");
+                altaEmpleado(lista, TAM);
                 system("pause");
             break;
 
@@ -56,7 +57,8 @@ int main()
             break;
 
             case 5:
-                printf("\nListar empleados\n");
+            //  printf("\nListar empleados\n");
+                mostrarEmpleados(lista, TAM);
                 system("pause");
             break;
 
@@ -124,7 +126,7 @@ int buscarEmpleado(Eempleado vec[], int tam, int legajo)
 void mostrarEmpleado(Eempleado emp)
 {
     printf("\nNombre   Legajo   Sexo   Sueldo");
-    printf("    %s       %d       %c      %.2f");
+    printf("    %s       %d       %c      %.2f",emp.nombre, emp.legajo, emp.sexo, emp.sexo);
 }
 
 void mostrarEmpleados(Eempleado vec[], int tam)
@@ -141,6 +143,8 @@ void mostrarEmpleados(Eempleado vec[], int tam)
 void altaEmpleado(Eempleado vec[], int tam)
 {
     int indice;
+    int esta;
+    int legajo;
 
     indice = buscarLibre(vec, tam);
 
@@ -150,9 +154,45 @@ void altaEmpleado(Eempleado vec[], int tam)
     }
     else
     {
+        printf("\nInresar numero de legajo: ");
+        esta = buscarEmpleado(vec, tam, legajo);
+    }
+
+    if(esta == -1)
+    {
+        vec[indice].legajo = legajo;
+
+        printf("Ingrese nombre: ");
+        fflush(stdin);
+        gets(vec[indice].nombre);
+
+        printf("Ingrese sexo: ");
+        fflush(stdin);
+        scanf("%c",&vec[indice].sexo);
+
+        printf("Ingrese sueldo: ");
+        scanf("%f",&vec[indice].sueldo);
 
     }
+    else
+    {
+        printf("Ya existe un empleado con ese legajo");
+        mostrarEmpleado(vec[esta]);
+    }
+
 }
+
+void bajaEmpleado(Eempleado vec[], int tam)
+{
+    int legajo;
+    int confirmar;
+    int nuevoSueldo;
+    int esta;
+
+    printf("Ingrese legajo: ");
+    scanf("%d",&legajo);
+}
+
 
 int menuOpciones()
 {
