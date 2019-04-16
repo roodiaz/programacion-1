@@ -25,34 +25,5 @@ int main()
   printf("%d\n\n", isspace(' '));
 
 
-
     return 0;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
