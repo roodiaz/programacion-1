@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="..\Funciones\funcionesDiaz.h" open="0" top="0" tabpos="0" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3410" topLine="122" />
+		</Cursor>
+	</File>
+	<File name="..\Funciones\funcionesDiaz.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2544" topLine="0" />
+		</Cursor>
+		<Folding>
+			<Collapse line="7" />
+			<Collapse line="29" />
+			<Collapse line="38" />
+			<Collapse line="47" />
+			<Collapse line="56" />
+			<Collapse line="72" />
+			<Collapse line="86" />
+			<Collapse line="104" />
+			<Collapse line="123" />
+			<Collapse line="139" />
+			<Collapse line="160" />
+			<Collapse line="175" />
+			<Collapse line="184" />
+			<Collapse line="266" />
+			<Collapse line="280" />
+			<Collapse line="291" />
+			<Collapse line="300" />
+			<Collapse line="318" />
+			<Collapse line="333" />
+			<Collapse line="349" />
+			<Collapse line="355" />
+			<Collapse line="373" />
+			<Collapse line="447" />
+			<Collapse line="480" />
+		</Folding>
+	</File>
+</CodeBlocks_layout_file>

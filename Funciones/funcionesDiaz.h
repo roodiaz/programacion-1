@@ -46,74 +46,134 @@ float dividirDosNumeros(int, int);
  */
 int factorial(int);
 
+
 /** \brief Menu de opciones para calculadora
  *
  * \return Opcion elegida
  *
  */
+int menu()
 
 
-
-/** \brief pide un nombre y apellido
+/** \brief Obtiene nombre y apellido, y pone ambas iniciales en mayuscula
  *
- * \param le ingreso un vector [][50]
- * \param el tamanio del vector [tam][50]
- * \param lo pide y acomoda con iniciales en mayus
+ * \param Ingreo vector
+ * \param Ingreso tamanio de vector
  */
+void obtenerNomApe(char nomApe[][50], int tam);
 
 
-void pedirNomApe(char nomApe[][50], int tam);
-
-/** \brief pide sexos
+/** \brief Obtiene y valida sexo
  *
- * \param le ingreso un vector []
- * \param el tamanio del vector [tam]
- * \param los pide y acomoda
+ * \param Ingreso vector
+ * \param Ingreso tamanio de vector
  */
-
-
 void obtenerSexo(char sexo[], int tam);
 
 
-/** \brief pide legajos
+/** \brief Verifica y obtiene edad
  *
- * \param le ingreso un vector []
- * \param el tamanio del vector [tam]
- * \param los pide y acomoda
+ * \param Ingreso vector
+ * \param Ingreso tamanio
+ */
+void obtenerEdad(int edad[], int tam);
+
+
+/** \brief Verifica y obtiene legajo
+ *
+ * \param Ingreso vector
+ * \param Ingreso tamaño de vector
  */
 void obtenerLegajo(int legajos[], int tam);
 
-/** \brief pide edades
+
+/** \brief Duplica vector
+
  *
- * \param le ingreso un vector []
- * \param el tamanio del vector [tam]
- * \param los pide y acomoda
+ * \param Ingreso vector
+ * \param Ingreso tamaño de vector
  */
-
-void obtenerEdad(int edad[], int tam);
-
-/** \brief duplica un vector x 2
- *
- * \param le ingreso un vector []
- * \param el tamanio del vector [tam]
- * \param lo duplica
- */
-
 void duplicarVector(int vector[], int tam);
 
-/** \brief ingreso vectores y los ordena por sexo y alfabeticamente
- *
- * \param le ingreso un vector []
- * \param el tamanio del vector [tam]
- * \param lo duplica
- */
 
-int menu();
+/** \brief Ordena vectores por sexo y nombre alfabeticamente
+ *
+ * \param Ingreso vectores
+ * \param Ingreso tamanio de vector
+ */
+void ordenarVectores( int vector[], int vector2[], int vector3[], char vectorSex[], float vectorFloat[],char nomApe[][50], int vector4 [],int tam);
+
+
+/** \brief
+ *
+ * \param
+ * \param
+ * \return
+ *
+ */
 void inicializarEmpleados(eEmpleado vec[], int tam);
+
+
+/** \brief Busca espacio libre para dar de alta empleado
+ *
+ * \param Ingreso vector
+ * \param Ingreso tamanio vector
+ * \return -1 sino hay lugar, o devuelve indice libre
+ *
+ */
 int buscarLibre(eEmpleado vec[], int tam);
+
+
+/** \brief Busca empleado dado de alta por su legajo
+ *
+ * \param Ingreso vector
+ * \param Ingreso tamanio vector
+ * \param Ingreso numero de legajo
+ * \return -1 sino existe legajo, o devuelve el numero de legajo si esta
+ *
+ */
 int buscarEmpleado(eEmpleado vec[], int tam, int legajo);
+
+
+/** \brief Muestra datos de un solo empleado
+ *
+ * \param Ingreso vector
+ * \param Ingreso tamanio vector
+ *
+ */
 void mostrarEmpleado(eEmpleado emp);
+
+
+/** \brief Muestra datos de todos los empleados
+ *
+ * \param Ingreso vector
+ * \param Ingreso tamanio vector
+ *
+ */
 void mostrarEmpleados(eEmpleado vec[], int tam);
+
+/** \brief Da de alta un empleado
+ *
+ * \param Ingreso vector
+ * \param Ingreso tamanio vector
+ *
+ */
 void altaEmpleado(eEmpleado vec[], int tam);
+
+
+/** \brief Da de baja un empleado
+ *
+ * \param Ingreso vector
+ * \param Ingreso tamanio de vector
+ *
+ */
 void bajaEmpleado(eEmpleado vec[], int tam);
-void ModificacionEmpleado(eEmpleado vec[], int tam);
+
+
+/** \brief Permite modificar sueldo de un empleado ya cargado
+ *
+ * \param Ingreso vector
+ * \param Ingreso tamanio vector
+ *
+ */
+void ModificacionsueldoEmpleado(eEmpleado vec[], int tam);

@@ -25,7 +25,6 @@ int obtenerMaximo (int x, int y, int z)
     return max;
 }
 
-}
 
 int sumarDosNumeros (int x, int y)
 {
@@ -122,7 +121,7 @@ void obtenerSexo(char sexo[], int tam)
     }
 }
 
-void pedirEdad(int edad[], int tam){
+void obtenerEdad(int edad[], int tam){
 
     for(int i=0 ; i<tam ; i++){
         system("cls");
@@ -137,10 +136,8 @@ void pedirEdad(int edad[], int tam){
 }
 
 
-
-
-void pedirNomApe(char nomApe[][50], int tam){
-
+void obtenerNomApe(char nomApe[][50], int tam)
+{
     for(int i=0 ; i<tam ; i++){
         system("cls");
         printf("Ingrese nombre y apellido NRO: %d : \n", i);
@@ -157,10 +154,7 @@ void pedirNomApe(char nomApe[][50], int tam){
                 {
                     nomApe[i][j+1] = toupper(nomApe[i][j+1]);
                 }
-
         }
-
-
     }
 }
 
@@ -178,8 +172,8 @@ void pedirLegajos(int legajos[], int tam){
     }
 }
 
-void duplicarVector(int vector[], int tam){
-
+void duplicarVector(int vector[], int tam)
+{
     int i;
 
     for(i=0 ; i<tam ; i++){
@@ -230,8 +224,6 @@ void ordenarVectores( int vector[], int vector2[], int vector3[], char vectorSex
                 strcpy(auxString[0], nomApe[i]);
                 strcpy(nomApe[i], nomApe[j]);
                 strcpy(nomApe[j], auxString[0]);
-
-
             }
             else
             {
@@ -266,13 +258,9 @@ void ordenarVectores( int vector[], int vector2[], int vector3[], char vectorSex
                     vector4[i] = vector4[j];
                     vector4[j] = auxInt;
                 }
-
-
             }
         }
-
     }
-
 }
 
 int buscarEntero(int num, int vec[], int tam)
@@ -329,7 +317,6 @@ int menu()
 
 int buscarLibre(eEmpleado vec[], int tam)
 {
-
     int indice = -1;
 
     for(int i=0; i < tam; i++)
@@ -345,7 +332,6 @@ int buscarLibre(eEmpleado vec[], int tam)
 
 int buscarEmpleado(eEmpleado vec[], int tam, int legajo)
 {
-
     int indice = -1;
 
     for(int i=0; i < tam; i++)
@@ -359,10 +345,12 @@ int buscarEmpleado(eEmpleado vec[], int tam, int legajo)
     return indice;
 }
 
+
 void mostrarEmpleado(eEmpleado emp)
 {
     printf("\nLegajo: %d\n Nombre: %s\n Sexo: %c\n Sueldo: %.2f\n Fecha ingreso: %02d/%02d/%d\n", emp.legajo, emp.nombre, emp.sexo, emp.sueldo, emp.fechaIngreso.dia, emp.fechaIngreso.mes, emp.fechaIngreso.anio);
 }
+
 
 void mostrarEmpleados(eEmpleado vec[], int tam)
 {
@@ -407,9 +395,23 @@ void altaEmpleado(eEmpleado vec[], int tam)
         {
             vec[indice].legajo = legajo;
 
-            printf("Ingrese nombre: ");
+            system("cls");
+            printf("Ingrese nombre y apellido: ");
             fflush(stdin);
-            gets(vec[indice].nombre);
+            gets(gets(vec[indice].nombre);
+            strlwr(gets(vec[indice].nombre);
+
+            vec[indice].nombre[0] = toupper(vec[indice].nombre[0]);
+
+
+            for(int j=0;j<50;j++)
+            if(vec[indice].nombre [i][j] != '\0')
+            {
+                if(vec[indice].nombre[i][j] == ' ')
+                {
+                    vec[indice].nombre[i][j+1] = toupper(vec[indice].nombre[i][j+1]);
+                }
+            }
 
             printf("Ingrese sexo: ");
             fflush(stdin);
@@ -436,7 +438,6 @@ void altaEmpleado(eEmpleado vec[], int tam)
         }
         else
         {
-
             printf("Ya existe un empleado con el legajo %d\n", legajo);
 
             mostrarEmpleado(vec[esta]);
@@ -476,8 +477,8 @@ void bajaEmpleado(eEmpleado vec[], int tam){
 
 }
 
-void ModificacionEmpleado(eEmpleado vec[], int tam){
-
+void ModificacionSueldoEmpleado(eEmpleado vec[], int tam)
+{
     int legajo;
     char confirma;
     float nuevoSueldo;
