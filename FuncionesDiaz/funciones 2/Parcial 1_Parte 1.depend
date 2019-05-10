@@ -1,0 +1,63 @@
+# depslib dependency file v1.0
+1557461899 source:c:\users\rocio\desktop\parcial 1_parte 1\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"libros.h"
+	"inputDiaz.h"
+
+1557461775 source:c:\users\rocio\desktop\parcial 1_parte 1\libros.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"libros.h"
+	"inputDiaz.h"
+
+1557461664 c:\users\rocio\desktop\parcial 1_parte 1\libros.h
+
+1557452155 c:\users\rocio\desktop\parcial 1_parte 1\inputdiaz.h
+
+1557455609 source:c:\users\rocio\desktop\parcial 1_parte 1\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"libros.h"
+	"inputDiaz.h"
+
+1557455609 source:c:\users\rocio\desktop\funciones 2\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"libros.h"
+	"inputDiaz.h"
+
+1557461664 c:\users\rocio\desktop\funciones 2\libros.h
+
+1557452155 c:\users\rocio\desktop\funciones 2\inputdiaz.h
+
+1557462188 source:c:\users\rocio\desktop\funciones 2\libros.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"libros.h"
+	"inputDiaz.h"
+
+1557461899 source:c:\users\rocio\desktop\funciones 2\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"libros.h"
+	"inputDiaz.h"
+
