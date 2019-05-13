@@ -278,6 +278,14 @@ void modificarAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor,
 
     indice=buscarAutoPorPatente(vecAuto, tamAuto, auxChar);
 
+    while(indice == -1)
+    {
+        printf("Patente no registrada!!!\n");
+        printf("\n>>> Ingrese patente: ");
+        fflush(stdin);
+        gets(auxChar);
+        indice=buscarAutoPorPatente(vecAuto, tamAuto, auxChar);
+    }
     if(indice != -1)
     {
         printf ("\nDesea modificar auto? s/n: ");
@@ -317,11 +325,6 @@ void modificarAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor,
             }
 
         }
-    }
-    else
-    {
-        printf("Auto no registrado!!!\n\n");
-        system("pause");
     }
 }
 
