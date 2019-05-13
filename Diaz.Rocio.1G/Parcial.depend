@@ -42,3 +42,48 @@
 
 1557716745 c:\users\rocio\desktop\diaz.rocio.1g\trabajos.h
 
+1557719945 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+
+1557718521 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\inputdiaz.h
+
+1557719968 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.h
+
+1557718521 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	<time.h>
+	"inputDiaz.h"
+
+1557720284 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"autos.h"
+	"trabajos.h"
+
+1557719968 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.h
+
+1557719915 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+	"inputDiaz.h"
+

@@ -21,6 +21,14 @@ typedef struct
     int ocupado;
 } eAuto;
 
+typedef struct
+{
+    int idServicio;
+    char nombreServicio[25];
+    int precio;
+
+} eServicio;
+
 
 int menuABM();
 int menuModificacionAuto();

@@ -5,6 +5,7 @@
 #include <string.h>
 #include "inputDiaz.h"
 #include "autos.h"
+#include "trabajos.h"
 
 int menuABM()
 {
@@ -67,6 +68,11 @@ void mostrarMarcas(eMarca lista[], int tam)
         mostrarMarca(lista[i]);
         cont++;
     }
+    if(cont==0)
+    {
+        printf("\nNo hay autos para mostrar!!!\n\n");
+        system("pause");
+    }
 }
 
 int obtenerMarcas(eMarca vecMarca[], int tamMarca, int idMarca, char dondeAsinar[])
@@ -117,6 +123,11 @@ void mostrarColores(eColor lista[], int tam)
         mostrarColor(lista[i]);
         cont++;
     }
+    if(cont==0)
+    {
+        printf("\nNo hay autos para mostrar!!!\n\n");
+        system("pause");
+    }
 }
 
 void mostrarAuto(eAuto vecAuto, eColor vecColor[], int tamColor, eMarca vecMarca[], int tamMarca)
@@ -144,6 +155,12 @@ void mostrarAutos(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, 
             mostrarAuto(vecAuto[i], vecColor, tamColor, vecMarca, tamMarca);
             cont++;
         }
+    }
+
+    if(cont==0)
+    {
+        printf("\nNo hay autos para mostrar!!!\n\n");
+        system("pause");
     }
 }
 
@@ -173,7 +190,7 @@ void altaAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMar
 
         if(indiceMarca != -1)
         {
-             vecAuto[indice].idMarca=id;
+            vecAuto[indice].idMarca=id;
         }
         while(indiceMarca==-1)
         {
@@ -183,7 +200,7 @@ void altaAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMar
             indiceMarca=buscarMarcaPorId(vecMarca, tamMarca, id);
         }
 
-             ////////////////////////////
+        ////////////////////////////
         mostrarColores(vecColor, tamColor);
         printf("\nIngrese el Id del color: ");
         scanf("%d",&id);
@@ -202,7 +219,7 @@ void altaAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMar
             indiceColor=buscarColorPorId(vecColor, tamColor, id);
         }
 
-                /////////////
+        /////////////
         system("cls");
         vecAuto[indice].anioAuto=obtenerNumeroEntre(2020, 1980, "## Ingrese anio del auto: ");
 
@@ -353,7 +370,7 @@ void ordenarAutos(eAuto vec[], int tam)
     {
         for(int j=i+1; j<tam; j++)
         {
-            if(vec[i].idMarca<vec[j].idMarca)
+            if(vec[i].idMarca>vec[j].idMarca)
             {
                 aux=vec[i];
                 vec[i]=vec[j];
@@ -371,6 +388,8 @@ void ordenarAutos(eAuto vec[], int tam)
         }
     }
 }
+
+
 
 int buscarMarcaPorId(eMarca vec[], int tam, int idMarca)
 {

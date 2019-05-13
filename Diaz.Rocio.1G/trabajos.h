@@ -8,14 +8,6 @@ typedef struct
 
 typedef struct
 {
-    int idServicio;
-    char nombreServicio[25];
-    int precio;
-
-} eServicio;
-
-typedef struct
-{
     int idTrabajo;
     char patente[8];
     int idServicio;
@@ -27,7 +19,7 @@ typedef struct
 int buscarLibreTrabajo(eTrabajo vec[], int tam);
 int obtenerServicios(eServicio servicio[], int tamServ, int idServicio, char dondeAsignar[]);
 void incrementalTrabajo(eTrabajo vec[],int tam);
-void mostrarTrabajo(eTrabajo vecTrabajo, eServicio vecServ[], int tamServ);
+void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamServicio);
 void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[], int tamServ);
 void mostrarServicio(eServicio vec);
 void mostrarServicios(eServicio vec[], int tam);

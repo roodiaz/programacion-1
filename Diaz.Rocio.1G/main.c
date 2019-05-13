@@ -14,11 +14,11 @@
 
 int main()
 {
-    eAuto listaAuto[TAMAUTO]= {{500,"zad-414", 5000, 6000, 2009, 1},{300, "jff-523", 2000, 9000, 2018, 1},{100, "aza-253", 4000, 8000, 2000, 1}, {600, "cbc-123", 3000, 7000, 2011, 1}};
+    eAuto listaAuto[TAMAUTO]= {{500,"zad-414", 1000, 6000, 2009, 1},{300, "jff-523", 1000, 9000, 2018, 1},{100, "aza-253", 4000, 8000, 2000, 1}, {600, "cbc-123", 3000, 7000, 2011, 1}};
     eMarca listaMarcas[TAMMARCA] = {{1000, "Fiat"},{2000, "Ford"},{3000, "Chevrolet"},{4000, "Renault"},{5000, "Peugeot"}};
     eColor listaColor[TAMCOLOR] = {{5000, "Rojo"},{6000, "Azul"},{7000, "Bordo"},{8000, "Negro"},{9000, "Gris"}};
-    eServicio listaServicio[TAMSERVICIO] ={{40000, "Lavado", 250},{60000, "Pulido", 300},{60000, "Encerado", 400},{30000, "Completo", 600}};
-    eTrabajo listTrabajo[TAMTRABAJO];
+    eServicio listaServicio[TAMSERVICIO] ={{40000, "Lavado", 250},{60000, "Pulido", 300},{70000, "Encerado", 400},{30000, "Completo", 600}};
+    eTrabajo listTrabajo[TAMTRABAJO]={{1, "tew-624", 40000,{12,3,2019},1},{2,"hsg-733",70000,{4,10,2019},1},{3,"mgf-635",30000,{12,3,2019},1}};
 
     char salir = 'n';
     char confirma;

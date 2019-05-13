@@ -6,6 +6,7 @@
 #include "inputDiaz.h"
 #include "autos.h"
 #include "trabajos.h"
+#include "inputDiaz.h"
 
 int buscarLibreTrabajo(eTrabajo vec[], int tam)
 {
@@ -26,11 +27,11 @@ int obtenerServicios(eServicio servicio[], int tamServ, int idServicio, char don
 {
     int todoOk=-1;
 
-    for(int i= 0 ; i<tamServ; i++)
+    for(int i= 0 ; i<tamServ;i++)
     {
         if(idServicio == servicio[i].idServicio)
         {
-            strcpy(dondeAsignar, servicio[i].nombreServicio);
+            strcpy(dondeAsignar,servicio[i].nombreServicio);
             todoOk=1;
             break;
         }
@@ -38,11 +39,11 @@ int obtenerServicios(eServicio servicio[], int tamServ, int idServicio, char don
     return todoOk;
 }
 
-void mostrarTrabajo(eTrabajo trabajo, eServicio servico[], int tamServicio)
+void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamServicio)
 {
     char nombreSer[25];
 
-    obtenerServicios(servico, tamServicio, trabajo.idServicio, nombreSer);
+    obtenerServicios(servicios,tamServicio,trabajo.idServicio,nombreSer);
 
     printf("ID: %d  Patente: %s  Servicio: %s Fecha:%02d/%02d/%d\n",trabajo.idTrabajo,trabajo.patente,nombreSer,trabajo.fechaTrabajo.dia,trabajo.fechaTrabajo.mes,trabajo.fechaTrabajo.anio);
 
@@ -52,7 +53,7 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
 {
     int cont=0;
 
-    system("pause");
+    system("cls");
 
     for(int i=0; i<tamTrabajo; i++)
     {
@@ -61,6 +62,11 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
             mostrarTrabajo(vecTrabajo[i], vecServ, tamServ);
             cont++;
         }
+    }
+
+    if(cont==0)
+    {
+        printf("\nNo hay trabajos para mostrar!!!\n\n");
     }
 }
 
@@ -144,7 +150,7 @@ void altaTrabajo(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[], int
             indicePatente=buscarAutoPorPatente(vecAuto, tamAuto, auxChar);
         }
 
-      /////////////////
+                        /////////////////
 
         mostrarServicios(vecServ, tamServ);
         printf("\nIngrese Id servicio: ");
@@ -156,7 +162,6 @@ void altaTrabajo(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[], int
         if(indiceServicio == -1)
         {
             vecTrabajo[indice].idServicio=id;
-
         }
         while(indiceServicio==-1)
         {
