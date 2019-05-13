@@ -3,7 +3,7 @@
 #include <ctype.h>
 #include <conio.h>
 #include <string.h>
-#include "libros.h"
+#include <time.h>
 #include "inputDiaz.h"
 
 
@@ -13,6 +13,22 @@ int validarCararteres(char letra[], char mensaje[])
     for(int i=0; i<strlen(letra); i++)
     {
         while(!(isalpha(letra[i])))
+        {
+            printf("%s",mensaje);
+            fflush(stdin);
+            scanf("%s",letra);
+        }
+    }
+
+    return 1;
+}
+
+int validarAlphaNumeric(char letra[], char mensaje[])
+{
+
+    for(int i=0; i<strlen(letra); i++)
+    {
+        while(!(isalnum(letra[i])))
         {
             printf("%s",mensaje);
             fflush(stdin);
@@ -77,6 +93,34 @@ void obtenerCadenaChar(char dondeAsginar[], int tamMax, char mensaje[])
     gets(auxChar);
 
     letra=validarCararteres(auxChar, mensaje);
+
+    if(letra==1)
+    {
+
+        while(strlen(auxChar)>tamMax || strlen(auxChar) < 1)
+        {
+            printf("\n*** Error ***");
+            printf("\n%s",mensaje);
+            fflush(stdin);
+            gets(auxChar);
+        }
+
+        strlwr(auxChar);
+        auxChar[0] = toupper(auxChar[0]);
+        strcpy(dondeAsginar, auxChar);
+    }
+}
+
+void obtenerCadenaAlpaNumerica(char dondeAsginar[], int tamMax, char mensaje[])
+{
+    char auxChar[100];
+    char letra;
+
+    printf("\n%s",mensaje);
+    fflush(stdin);
+    gets(auxChar);
+
+    letra=validarAlphaNumeric(auxChar, mensaje);
 
     if(letra==1)
     {
@@ -208,7 +252,7 @@ void obtenerTelefono(char dondeAsignar[], int tamMax, char mensaje[])
     }
 }
 
-void obtenerSexo(char * dondeAsignar, char mensaje[])
+void obtenerSexo(char dondeAsignar, char mensaje[])
 {
 
     char aux;
@@ -226,43 +270,131 @@ void obtenerSexo(char * dondeAsignar, char mensaje[])
         aux =tolower(aux);
     }
 
-    *dondeAsignar=aux;
-}
-
-void obtenerNumeroEntre(int * dondeAsignar, int tamMax, int tamMin, char mensaje[])
-{
-    int aux;
-
-    printf("\n%s",mensaje);
-    scanf("%d",&aux);
-
-
-    while(aux > tamMax || aux < tamMin)
-    {
-        printf("\n*** Error ***\n");
-        printf("\n%s",mensaje);
-        scanf("%d",&aux);
-    }
-
-    *dondeAsignar=aux;
-
-}
-
-void obtenerNumeroIgualA(int dondeAsignar, int tam, char mensaje[])
-{
-    int aux;
-
-    printf("\n%s",mensaje);
-    scanf("%d",&aux);
-
-
-    while(aux != tam)
-    {
-        printf("\n*** Error ***\n");
-        printf("\n%s",mensaje);
-        scanf("%d",&aux);
-    }
-
     dondeAsignar=aux;
+}
 
+int obtenerNumeroEntre(int tamMax, int tamMin, char mensaje[])
+{
+    int num;
+
+    printf("\n%s",mensaje);
+    scanf("%d",&num);
+
+    while(num > tamMax || num < tamMin)
+    {
+        if(!isdigit(num))
+        {
+            printf("\n*** Error ***\n");
+            printf("\n%s",mensaje);
+            scanf("%d",&num);
+        }
+    }
+
+    return num;
+
+}
+
+int obtenerNumeroIgualA(int numReferencia, char mensaje[])
+{
+    int aux;
+
+    printf("\n%s",mensaje);
+    scanf("%d",&aux);
+
+
+    while(aux != numReferencia)
+    {
+        printf("\n*** Error ***\n");
+        printf("\n%s",mensaje);
+        scanf("%d",&aux);
+    }
+
+    return aux;
+
+}
+
+int generarIdAletatorio(int tamMax, int tamMin)
+{
+    int id;
+
+    srand(time(NULL));
+    id = tamMin + rand() % (tamMax - tamMin);
+
+
+    printf("\nId: %d\n",id);
+
+    return id;
+}
+
+void validarFecha(int asignarDia, int asignarMes, int asignarAnio)
+{
+    int auxInt;
+
+    while(auxInt<0 || auxInt>31)
+    {
+        printf ("\n*** ERROR ***");
+        printf("\nIngresar dia: ");
+        fflush(stdin);
+        scanf ("%d",&auxInt);
+    }
+
+    asignarDia=auxInt;
+
+    while(auxInt<0 || auxInt>12)
+    {
+        printf ("\n*** ERROR ***");
+        printf("\nIngresar mes: ");
+        fflush (stdin);
+        scanf ("%d",&auxInt);
+    }
+
+    asignarMes=auxInt;
+
+    while(auxInt<1980 || auxInt>2020)
+    {
+        printf ("\n*** ERROR ***");
+        printf("\nIngresar anio: ");
+        fflush (stdin);
+        scanf ("%d",&auxInt);
+    }
+
+    asignarAnio=auxInt;
+}
+
+void validarPatente(char dondeAsignar[], char mensaje[])
+{
+    char auxChar[10];
+
+    printf("\n%s", mensaje);
+    fflush(stdin);
+    gets(auxChar);
+
+    while(!(isalpha(auxChar[0])) || !(isalpha(auxChar[1])) || !(isalpha(auxChar[2])))
+    {
+        printf("\n*** ERROR ***");
+        printf("\n%s", mensaje);
+        fflush(stdin);
+        gets(auxChar);
+    }
+
+    while(auxChar[3] != '-')
+    {
+        printf("\n*** ERROR ***");
+        printf("\n%s", mensaje);
+        fflush(stdin);
+        gets(auxChar);
+    }
+
+    while(!(isdigit(auxChar[4])) || !(isdigit(auxChar[5])) || !(isdigit(auxChar[6])))
+    {
+        printf("\n*** ERROR ***");
+        printf("\n%s", mensaje);
+        fflush(stdin);
+        gets(auxChar);
+    }
+
+    auxChar[0]=tolower(auxChar[0]);
+    auxChar[1]=tolower(auxChar[1]);
+    auxChar[2]=tolower(auxChar[2]);
+    strcpy(dondeAsignar, auxChar);
 }
