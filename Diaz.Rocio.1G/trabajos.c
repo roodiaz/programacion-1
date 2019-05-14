@@ -45,7 +45,7 @@ void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamServicio)
 
     obtenerServicios(servicios,tamServicio,trabajo.idServicio,nombreSer);
 
-    printf("ID: %d  Patente: %s  Servicio: %s Fecha:%02d/%02d/%d\n",trabajo.idTrabajo,trabajo.patente,nombreSer,trabajo.fechaTrabajo.dia,trabajo.fechaTrabajo.mes,trabajo.fechaTrabajo.anio);
+    printf("%d  %10s   %10s  %02d/%02d/%d\n",trabajo.idTrabajo,trabajo.patente,nombreSer,trabajo.fechaTrabajo.dia,trabajo.fechaTrabajo.mes,trabajo.fechaTrabajo.anio);
 
 }
 
@@ -54,6 +54,8 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
     int cont=0;
 
     system("cls");
+    printf("ID      PATENTE   TRABAJO   FECHA");
+    printf("\n");
 
     for(int i=0; i<tamTrabajo; i++)
     {
@@ -72,7 +74,7 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
 
 void mostrarServicio(eServicio vec)
 {
-    printf("ID: %d  Servicio: %s  Precio: %d\n",vec.idServicio, vec.nombreServicio, vec.precio);
+    printf("%d  %10s  %5d\n",vec.idServicio, vec.nombreServicio, vec.precio);
 }
 
 void mostrarServicios(eServicio vec[], int tam)
@@ -80,6 +82,8 @@ void mostrarServicios(eServicio vec[], int tam)
     int cont=0;
 
     system("cls");
+    printf("ID      SERVICIO   PRECIO");
+    printf("\n");
 
     for(int i=0; i<tam; i++)
     {

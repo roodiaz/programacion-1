@@ -252,7 +252,7 @@ void obtenerTelefono(char dondeAsignar[], int tamMax, char mensaje[])
     }
 }
 
-void obtenerSexo(char dondeAsignar, char mensaje[])
+char obtenerSexo(char mensaje[])
 {
 
     char aux;
@@ -270,7 +270,7 @@ void obtenerSexo(char dondeAsignar, char mensaje[])
         aux =tolower(aux);
     }
 
-    dondeAsignar=aux;
+    return aux;
 }
 
 int obtenerNumeroEntre(int tamMax, int tamMin, char mensaje[])
@@ -324,41 +324,6 @@ int generarIdAletatorio(int tamMax, int tamMin)
     printf("\nId: %d\n",id);
 
     return id;
-}
-
-void validarFecha(int asignarDia, int asignarMes, int asignarAnio)
-{
-    int auxInt;
-
-    while(auxInt<0 || auxInt>31)
-    {
-        printf ("\n*** ERROR ***");
-        printf("\nIngresar dia: ");
-        fflush(stdin);
-        scanf ("%d",&auxInt);
-    }
-
-    asignarDia=auxInt;
-
-    while(auxInt<0 || auxInt>12)
-    {
-        printf ("\n*** ERROR ***");
-        printf("\nIngresar mes: ");
-        fflush (stdin);
-        scanf ("%d",&auxInt);
-    }
-
-    asignarMes=auxInt;
-
-    while(auxInt<1980 || auxInt>2020)
-    {
-        printf ("\n*** ERROR ***");
-        printf("\nIngresar anio: ");
-        fflush (stdin);
-        scanf ("%d",&auxInt);
-    }
-
-    asignarAnio=auxInt;
 }
 
 void validarPatente(char dondeAsignar[], char mensaje[])

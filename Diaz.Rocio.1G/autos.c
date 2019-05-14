@@ -21,8 +21,9 @@ int menuABM()
     printf("   6. Listar Colores.\n");
     printf("   7. Listar Servicio.\n");
     printf("   8. Alta Trabajos.\n");
-    printf("   9. Listar trabajos.\n\n");
-    printf("   10. Salir.\n\n");
+    printf("   9. Listar trabajos.\n");
+    printf("   10. Informes.\n\n");
+    printf("   11. Salir.\n\n");
     printf(">> Ingresar opcion: ");
     scanf("%d",&opcion);
 
@@ -54,7 +55,7 @@ int buscarLibre(eAuto vec[], int tam)
 
 void mostrarMarca(eMarca lista)
 {
-    printf("ID: %d  Marca: %s\n", lista.idMarca, lista.nombreMarca);
+    printf("%d  %10s\n", lista.idMarca, lista.nombreMarca);
 }
 
 void mostrarMarcas(eMarca lista[], int tam)
@@ -62,6 +63,8 @@ void mostrarMarcas(eMarca lista[], int tam)
     int cont=0;
 
     system("cls");
+    printf("ID      MARCAS");
+    printf("\n");
 
     for(int i=0; i<tam; i++)
     {
@@ -93,7 +96,7 @@ int obtenerMarcas(eMarca vecMarca[], int tamMarca, int idMarca, char dondeAsinar
 
 void mostrarColor(eColor lista)
 {
-    printf("ID: %d  Color: %s\n",lista.idColor, lista.nombreColor);
+    printf("%d %10s\n",lista.idColor, lista.nombreColor);
 }
 
 int obtenerColores(eColor vecColor[], int tamColor, int idColor, char dondeAsinar[])
@@ -117,6 +120,8 @@ void mostrarColores(eColor lista[], int tam)
     int cont=0;
 
     system("cls");
+    printf("ID      COLOR");
+    printf("\n");
 
     for(int i=0; i<tam; i++)
     {
@@ -138,7 +143,7 @@ void mostrarAuto(eAuto vecAuto, eColor vecColor[], int tamColor, eMarca vecMarca
     obtenerColores(vecColor, tamColor, vecAuto.idColor, nombreColor);
     obtenerMarcas(vecMarca, tamMarca, vecAuto.idMarca, nombreMarca);
 
-    printf("ID: %d  Patente: %s  Marca: %s  Color: %s  Modelo: %d\n",vecAuto.idAuto,vecAuto.patente, nombreMarca, nombreColor, vecAuto.anioAuto);
+    printf("%5d  %10s  %10s  %10s  %5d  %10s  %5c\n",vecAuto.idAuto,vecAuto.patente, nombreMarca, nombreColor, vecAuto.anioAuto, vecAuto.nombre, vecAuto.sexo);
 }
 
 void mostrarAutos(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMarca vecMarca[], int tamMarca)
@@ -148,6 +153,8 @@ void mostrarAutos(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, 
     system("cls");
 
     system("cls");
+    printf("   ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
+    printf("\n");
     for(int i=0; i<tamAuto; i++)
     {
         if(vecAuto[i].ocupado==1)
@@ -176,7 +183,7 @@ void altaAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMar
 
     if(indice != -1)
     {
-        vecAuto[indice].idAuto=generarIdAletatorio(1000, 100);
+        vecAuto[indice].idAuto=generarIdAletatorio(100, 1);
 
         validarPatente(auxChar,"## Ingresar patente (3 letra)-(3 numeros): ");
         strcpy(vecAuto[indice].patente, auxChar);
@@ -222,6 +229,11 @@ void altaAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMar
         /////////////
         system("cls");
         vecAuto[indice].anioAuto=obtenerNumeroEntre(2020, 1980, "## Ingrese anio del auto: ");
+
+        obtenerCadenaChar(auxChar, 20, "## Ingrese nombre: ");
+        strcpy(vecAuto[indice].nombre, auxChar);
+
+        vecAuto[indice].sexo=obtenerSexo("## Ingrese sexo f/m: ");
 
         vecAuto[indice].ocupado=1;
     }
@@ -298,7 +310,6 @@ void modificarAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor,
         }
         else
         {
-
             switch(menuModificacionAuto())
             {
             case 1:

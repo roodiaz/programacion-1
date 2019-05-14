@@ -18,7 +18,10 @@ typedef struct
     int idMarca;
     int idColor;
     int anioAuto;
+    char nombre[20];
+    char sexo;
     int ocupado;
+
 } eAuto;
 
 typedef struct

@@ -70,12 +70,12 @@ void obtenerTelefono(char dondeAsignar[], int tamMax, char mensaje[]);
 
 /** \brief valida telefono
  *
- * \param char donde se va a asignar la validacion
+
  * \param mensaje para imprimir en pantalla
- * \return nada
+ * \return sexo validado
  *
  */
-void obtenerSexo(char dondeAsignar, char mensaje[]);
+char obtenerSexo(char mensaje[]);
 
 /** \brief valida numeros entre dos parametros
  *
@@ -90,10 +90,9 @@ int obtenerNumeroEntre(int tamMax, int tamMin, char mensaje[]);
 
 /** \brief valida que un numero sea igual al que se asigne
  *
- * \param int donde se va a asignar la validacion
  * \param numero al que sea desea igualar
  * \param mensaje para imprimir en pantalla
- * \return nada
+ * \return numero validado
  *
  */
 int obtenerNumeroIgualA(int numReferencia, char mensaje[]);
@@ -107,7 +106,7 @@ int obtenerNumeroIgualA(int numReferencia, char mensaje[]);
  */
 int generarIdAletatorio(int tamMax, int tamMin);
 
-void validarFecha(int asignarDia, int asignarMes, int asignarAnio) ;
+
 
 void validarPatente(char dondeAsignar[], char mensaje[]);
 

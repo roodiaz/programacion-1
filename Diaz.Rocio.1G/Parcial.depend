@@ -87,3 +87,121 @@
 	"trabajos.h"
 	"inputDiaz.h"
 
+1557789983 source:c:\users\alumno\desktop\diaz.rocio.1g\autos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+
+1557784655 c:\users\alumno\desktop\diaz.rocio.1g\inputdiaz.h
+
+1557784070 c:\users\alumno\desktop\diaz.rocio.1g\autos.h
+
+1557783305 c:\users\alumno\desktop\diaz.rocio.1g\trabajos.h
+
+1557784656 source:c:\users\alumno\desktop\diaz.rocio.1g\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	<time.h>
+	"inputDiaz.h"
+
+1557791531 source:c:\users\alumno\desktop\diaz.rocio.1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"autos.h"
+	"trabajos.h"
+	"informes.h"
+
+1557788233 source:c:\users\alumno\desktop\diaz.rocio.1g\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+	"inputDiaz.h"
+
+1557788517 c:\users\alumno\desktop\diaz.rocio.1g\informes.h
+
+1557791200 source:c:\users\alumno\desktop\diaz.rocio.1g\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+	"informes.h"
+
+1557789983 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\autos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+
+1557784655 c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\inputdiaz.h
+
+1557784070 c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\autos.h
+
+1557783305 c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\trabajos.h
+
+1557792102 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+	"informes.h"
+
+1557788517 c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\informes.h
+
+1557784656 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	<time.h>
+	"inputDiaz.h"
+
+1557791531 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<ctype.h>
+	<conio.h>
+	"autos.h"
+	"trabajos.h"
+	"informes.h"
+
+1557788233 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+	"inputDiaz.h"
+
