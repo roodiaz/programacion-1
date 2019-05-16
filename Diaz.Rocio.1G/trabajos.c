@@ -133,10 +133,16 @@ void altaTrabajo(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[], int
         printf("\n## ID: %d\n\n",vecTrabajo[indice].idTrabajo);
         system("pause");
 
+        //////
+
         mostrarAutos(vecAuto, tamAuto, vecColor, tamColor, vecMarca, tamMarca);
-        printf("\nIngrese patente: ");
-        fflush(stdin);
-        gets(auxChar);
+        validarPatente(auxChar, "Ingrese patente: ");
+
+        while(buscarAutoPorPatente(vecAuto, tamAuto,auxChar)==-1)
+        {
+            printf("\nNo existe esa patente!!!\n");
+            validarPatente(auxChar, "Ingrese patente: ");
+        }
 
         indicePatente=buscarAutoPorPatente(vecAuto, tamAuto, auxChar);
 
@@ -145,15 +151,6 @@ void altaTrabajo(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[], int
             strcpy(vecTrabajo[indice].patente, auxChar);
 
         }
-        while(indicePatente==-1)
-        {
-            printf("\nAuto no registrado!!!\n");
-            printf("\nIngrese patente: ");
-            fflush(stdin);
-            gets(auxChar);
-            indicePatente=buscarAutoPorPatente(vecAuto, tamAuto, auxChar);
-        }
-
                         /////////////////
 
         mostrarServicios(vecServ, tamServ);

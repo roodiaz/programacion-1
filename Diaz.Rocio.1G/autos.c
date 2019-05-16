@@ -236,6 +236,8 @@ void altaAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMar
         vecAuto[indice].sexo=obtenerSexo("## Ingrese sexo f/m: ");
 
         vecAuto[indice].ocupado=1;
+
+        printf("\nTrabajo dado de alta con exito!!!.\n\n");
     }
     else
     {
@@ -341,18 +343,22 @@ void modificarAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor,
 
 void bajaAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMarca vecMarca[], int tamMarca)
 {
-    int indice;
+    int indicePatente;
     char confirma;
     char auxChar[10];
 
     mostrarAutos(vecAuto, tamAuto, vecColor, tamColor, vecMarca, tamMarca);
-    printf("\n>>> Ingrese patente: ");
-    fflush(stdin);
-    gets(auxChar);
+    validarPatente(auxChar, "Ingrese patente: ");
 
-    indice=buscarAutoPorPatente(vecAuto, tamAuto, auxChar);
+    while(buscarAutoPorPatente(vecAuto, tamAuto,auxChar)==-1)
+    {
+        printf("\nNo existe esa patente!!!\n");
+        validarPatente(auxChar, "Ingrese patente: ");
+    }
 
-    if(indice != -1)
+    indicePatente=buscarAutoPorPatente(vecAuto, tamAuto, auxChar);
+
+    if(indicePatente != -1)
     {
         printf ("\nDesea dar de baja el auto? s/n: ");
         fflush (stdin);
@@ -364,7 +370,7 @@ void bajaAuto(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMar
         }
         else
         {
-            vecAuto[indice].ocupado=0;
+            vecAuto[indicePatente].ocupado=0;
             printf("\n\nAuto dado de baja con exito!!!\n\n");
             system("pause");
         }

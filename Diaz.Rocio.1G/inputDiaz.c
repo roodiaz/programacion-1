@@ -358,8 +358,8 @@ void validarPatente(char dondeAsignar[], char mensaje[])
         gets(auxChar);
     }
 
-    auxChar[0]=tolower(auxChar[0]);
-    auxChar[1]=tolower(auxChar[1]);
-    auxChar[2]=tolower(auxChar[2]);
+    auxChar[0]=toupper(auxChar[0]);
+    auxChar[1]=toupper(auxChar[1]);
+    auxChar[2]=toupper(auxChar[2]);
     strcpy(dondeAsignar, auxChar);
 }
