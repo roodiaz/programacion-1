@@ -11,7 +11,7 @@
 #define TAMMARCA 5
 #define TAMCOLOR 5
 #define TAMSERVICIO 5
-#define TAMTRABAJO 36
+#define TAMTRABAJO 37
 
 void hardCodearAutos(eAuto vec[], int tam);
 void hardCodearTrabajos(eTrabajo vec[], int tam);
@@ -50,7 +50,7 @@ int main()
     };
 
     char salir = 'n';
-    char confirma;
+    char seguir= 's';
 
     do
     {
@@ -91,50 +91,76 @@ int main()
             system("pause");
             break;
         case 10:
-
-            switch(menuInformes())
+            do
             {
-            case 1:
-                mostrarAutosPorColor(listaAuto, TAMAUTO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
-                system("pause");
-                break;
-            case 2:
-                mostrarAutosPorMarca(listaAuto, TAMAUTO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
-                system("pause");
-                break;
-            case 3:
-                trabajosUnAuto(listaAuto, TAMAUTO, listaServicio, TAMSERVICIO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
-                system("pause");
-                break;
-            case 4:
-                //autosSinTrabajos(listaAuto, TAMAUTO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
-                system("pause");
-                break;
-            case 5:
-                importePorAuto(listaAuto, TAMAUTO, listaServicio, TAMSERVICIO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
-                system("pasue");
-                break;
-            case 6:
-                servicioMasPedido(listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO, listaAuto, TAMAUTO);
-                system("pause");
-                break;
-            case 7:
-                totalPorFecha(listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO);
-                system("pause");
-                break;
-            case 8:
-                mostrarAutosPorTrabajo(listaAuto, TAMAUTO, listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO);
-                system("pause");
-                break;
+                switch(menuInformes())
+                {
+                case 1:
+                    mostrarAutosPorColor(listaAuto, TAMAUTO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
+                    system("pause");
+                    break;
+                case 2:
+                    mostrarAutosPorMarca(listaAuto, TAMAUTO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
+                    system("pause");
+                    break;
+                case 3:
+                    trabajosUnAuto(listaAuto, TAMAUTO, listaServicio, TAMSERVICIO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
+                    system("pause");
+                    break;
+                case 4:
+                    autosSinTrabajos(listaAuto, TAMAUTO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
+                    system("pause");
+                    break;
+                case 5:
+                    importePorAuto(listaAuto, TAMAUTO, listaServicio, TAMSERVICIO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
+                    system("pasue");
+                    break;
+                case 6:
+                    servicioMasPedido(listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO, listaAuto, TAMAUTO);
+                    system("pause");
+                    break;
+                case 7:
+                    totalPorFecha(listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO);
+                    system("pause");
+                    break;
+                case 8:
+                    mostrarAutosPorTrabajo(listaAuto, TAMAUTO, listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO);
+                    system("pause");
+                    break;
+                case 9:
+                    trabajosPorColor(listaServicio, TAMSERVICIO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaAuto, TAMAUTO);
+                    system("pause");
+                    break;
+                case 10:
+                    totalPorServicio(listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO);
+                    system("pause");
+                    break;
+                case 12:
+                    autosConTrabajoXFecha(listaAuto, TAMAUTO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
+                    system("pause");
+                    break;
+                case 13:
+                    printf("\nDesea seguir? s/n: ");
+                    fflush(stdin);
+                    scanf("%c",&seguir);
+
+                    if(tolower(seguir) == 's')
+                    {
+                        seguir = 's';
+                    }
+                    break;
+
+                }
             }
+            while(seguir == 's');
             break;
 
         case 11:
             printf("\nDesea salir? s/n: ");
             fflush(stdin);
-            confirma = getche();
+            scanf("%c",&salir);
 
-            if( tolower(confirma) == 's')
+            if(tolower(salir) == 'n')
             {
                 salir = 'n';
             }
@@ -156,28 +182,28 @@ void hardCodearAutos(eAuto vec[], int tam)
 {
     eAuto autos [23]=
     {
-        {1,"AAA-201", 1000, 5001, 1995,"pepe",'m',1},
-        {2,"DFR-234", 1003, 5000, 2002,"pepe",'m',1},
+        {1,"AAA-201", 1000, 5001, 1995,"sofia",'f',1},
+        {2,"DFR-234", 1003, 5000, 2002,"rocio",'f',1},
         {3,"GFT-564", 1002, 5003, 2007,"pepe",'m',1},
-        {4,"ACD-321", 1002, 5003, 1995,"pepe",'m',1},
-        {5,"HTD-656", 1004, 5002, 2008,"pepe",'m',1},
-        {6,"QSZ-435", 1003, 5001, 1994,"pepe",'m',1},
-        {7,"LGX-201", 1001, 5000, 2012,"pepe",'m',1},
-        {8,"SUZ-324", 1001, 5002, 1991,"pepe",'m',1},
-        {9,"HCU-762", 1000, 5003, 2008,"pepe",'m',1},
-        {10,"DYC-735", 1003, 5001, 2002,"pepe",'m',1},
-        {11,"JJK-879", 1003, 5001, 2010,"pepe",'m',1},
-        {12,"FED-322", 1004, 5002, 2006,"pepe",'m',1},
-        {13,"GHV-332", 1001, 5003, 2007,"pepe",'m',1},
-        {14,"BDE-221", 1000, 5004, 1996,"pepe",'m',1},
-        {15,"OPD-332", 1000, 5001, 2014,"pepe",'m',1},
-        {16,"PPD-121", 1002, 5001, 2015,"pepe",'m',1},
-        {17,"IIT-230", 1001, 5000, 2009,"pepe",'m',1},
-        {18,"KOD-220", 1004, 5002, 2011,"pepe",'m',1},
-        {19,"QSZ-305", 1004, 5002, 1993,"pepe",'m',1},
-        {20,"SSD-128", 1002, 5003, 1992,"pepe",'m',1},
-        {21,"SSD-240", 1003, 5004, 1992,"pepe",'m',1},
-        {22,"EDF-213", 1001, 5000, 2001,"pepe",'m',1},
+        {4,"ACD-321", 1002, 5003, 1995,"juan",'m',1},
+        {5,"HTD-656", 1004, 5002, 2008,"eva",'f',1},
+        {6,"QSZ-435", 1003, 5001, 1994,"pablo",'m',1},
+        {7,"LGX-201", 1001, 5000, 2012,"juana",'f',1},
+        {8,"SUZ-324", 1001, 5002, 1991,"mariela",'f',1},
+        {9,"HCU-762", 1000, 5003, 2008,"sandra",'f',1},
+        {10,"DYC-735", 1003, 5001, 2002,"diego",'m',1},
+        {11,"JJK-879", 1003, 5001, 2010,"ana",'f',1},
+        {12,"FED-322", 1004, 5002, 2006,"abril",'f',1},
+        {13,"GHV-332", 1001, 5003, 2007,"santiago",'m',1},
+        {14,"BDE-221", 1000, 5004, 1996,"lujan",'f',1},
+        {15,"OPD-332", 1000, 5001, 2014,"luis",'m',1},
+        {16,"PPD-121", 1002, 5001, 2015,"lucas",'m',1},
+        {17,"IIT-230", 1001, 5000, 2009,"mario",'m',1},
+        {18,"KOD-220", 1004, 5002, 2011,"gustavo",'m',1},
+        {19,"QSZ-305", 1004, 5002, 1993,"martina",'f',1},
+        {20,"SSD-128", 1002, 5003, 1992,"agustina",'f',1},
+        {21,"SSD-240", 1003, 5004, 1992,"carlos",'m',1},
+        {22,"EDF-213", 1001, 5000, 2001,"roberto",'m',1},
     };
 
     for(int i=0; i<tam; i++)
@@ -224,7 +250,7 @@ void hardCodearTrabajos(eTrabajo vec[], int tam)
         {32, "HTD-656", 20003, {12,9,2019}, 1},
         {33, "QSZ-435", 20001, {21,5,2019}, 1},
         {34, "HTD-656", 20002, {12,2,2019}, 1},
-        {35, "QSZ-435", 20000, {21,1,2019}, 1}
+        {35, "QSZ-435", 20000, {21,1,2019}, 1},
     };
 
     for(int i=0; i<tam; i++)

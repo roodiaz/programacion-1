@@ -63,7 +63,8 @@ void mostrarMarcas(eMarca lista[], int tam)
     int cont=0;
 
     system("cls");
-    printf("ID      MARCAS");
+    printf("ID      MARCAS\n");
+    printf("--      -------");
     printf("\n\n");
 
     for(int i=0; i<tam; i++)
@@ -71,6 +72,7 @@ void mostrarMarcas(eMarca lista[], int tam)
         mostrarMarca(lista[i]);
         cont++;
     }
+    printf("\n\n");
     if(cont==0)
     {
         printf("\nNo hay autos para mostrar!!!\n\n");
@@ -120,7 +122,8 @@ void mostrarColores(eColor lista[], int tam)
     int cont=0;
 
     system("cls");
-    printf("ID      COLOR");
+    printf("ID      COLOR\n");
+    printf("--     -------");
     printf("\n\n");
 
     for(int i=0; i<tam; i++)
@@ -128,6 +131,9 @@ void mostrarColores(eColor lista[], int tam)
         mostrarColor(lista[i]);
         cont++;
     }
+
+    printf("\n\n");
+
     if(cont==0)
     {
         printf("\nNo hay autos para mostrar!!!\n\n");
@@ -143,7 +149,7 @@ void mostrarAuto(eAuto vecAuto, eColor vecColor[], int tamColor, eMarca vecMarca
     obtenerColores(vecColor, tamColor, vecAuto.idColor, nombreColor);
     obtenerMarcas(vecMarca, tamMarca, vecAuto.idMarca, nombreMarca);
 
-    printf("%5d  %10s  %10s  %10s  %5d  %10s  %5c\n",vecAuto.idAuto,vecAuto.patente, nombreMarca, nombreColor, vecAuto.anioAuto, vecAuto.nombre, vecAuto.sexo);
+    printf("%02d  %10s  %10s  %10s  %7d  %10s  %5c\n",vecAuto.idAuto,vecAuto.patente, nombreMarca, nombreColor, vecAuto.anioAuto, vecAuto.nombre, vecAuto.sexo);
 }
 
 void mostrarAutos(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMarca vecMarca[], int tamMarca)
@@ -153,7 +159,8 @@ void mostrarAutos(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, 
     system("cls");
 
     system("cls");
-    printf("   ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
+    printf("ID     Patente      Marca      Color     Modelo     Nombre     Sexo\n");
+    printf("--     -------      -----      -----     ------     ------     ----");
     printf("\n\n");
     for(int i=0; i<tamAuto; i++)
     {
@@ -163,6 +170,7 @@ void mostrarAutos(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, 
             cont++;
         }
     }
+    printf("\n\n");
 
     if(cont==0)
     {

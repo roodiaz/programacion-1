@@ -16,3 +16,9 @@ void servicioMasPedido(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS
 void totalPorFecha(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS);
 
 void mostrarAutosPorTrabajo(eAuto listaA[], int tamA, eTrabajo listaT[], int tamT, eServicio listaS[], int tamS);
+
+void trabajosPorColor(eServicio listaS[], int tamS, eTrabajo listT[], int tamT, eColor listC[], int tamC, eAuto listaA[], int tamA);
+
+void totalPorServicio(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS);
+
+void autosConTrabajoXFecha(eAuto listaA[], int tamA, eTrabajo listaT[], int tamT, eColor listaC[], int tamC, eMarca listaM[], int tamM);

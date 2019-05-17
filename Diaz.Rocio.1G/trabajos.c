@@ -45,7 +45,7 @@ void mostrarTrabajo(eTrabajo trabajo, eServicio servicios[], int tamServicio)
 
     obtenerServicios(servicios,tamServicio,trabajo.idServicio,nombreSer);
 
-    printf("%d  %10s   %10s  %02d/%02d/%d\n",trabajo.idTrabajo,trabajo.patente,nombreSer,trabajo.fechaTrabajo.dia,trabajo.fechaTrabajo.mes,trabajo.fechaTrabajo.anio);
+    printf("%02d  %10s   %8s    %02d/%02d/%d\n",trabajo.idTrabajo,trabajo.patente,nombreSer,trabajo.fechaTrabajo.dia,trabajo.fechaTrabajo.mes,trabajo.fechaTrabajo.anio);
 
 }
 
@@ -54,8 +54,9 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
     int cont=0;
 
     system("cls");
-    printf("ID      PATENTE   TRABAJO   FECHA");
-    printf("\n\n");
+    printf("ID      PATENTE   TRABAJO    FECHA\n");
+    printf("--      --------  ------     -----");
+    printf("\n");
 
     for(int i=0; i<tamTrabajo; i++)
     {
@@ -65,6 +66,7 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
             cont++;
         }
     }
+    printf("\n\n");
 
     if(cont==0)
     {
@@ -74,7 +76,7 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
 
 void mostrarServicio(eServicio vec)
 {
-    printf("%d  %10s  %5d\n",vec.idServicio, vec.nombreServicio, vec.precio);
+    printf("%02d  %10s  %5d\n",vec.idServicio, vec.nombreServicio, vec.precio);
 }
 
 void mostrarServicios(eServicio vec[], int tam)
@@ -82,7 +84,8 @@ void mostrarServicios(eServicio vec[], int tam)
     int cont=0;
 
     system("cls");
-    printf("ID      SERVICIO   PRECIO");
+    printf("ID      SERVICIO   PRECIO\n");
+    printf("--      --------   ------");
     printf("\n\n");
 
     for(int i=0; i<tam; i++)
@@ -90,6 +93,7 @@ void mostrarServicios(eServicio vec[], int tam)
         mostrarServicio(vec[i]);
         cont++;
     }
+    printf("\n\n");
 }
 
 void incrementalTrabajo(eTrabajo vec[],int tam)
@@ -158,19 +162,19 @@ void altaTrabajo(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[], int
         fflush(stdin);
         scanf("%d",&id);
 
-        indiceServicio=buscarServicioPorId(vecServ, tamServ, id);
-
-        if(indiceServicio == -1)
-        {
-            vecTrabajo[indice].idServicio=id;
-        }
-        while(indiceServicio==-1)
+        while(buscarServicioPorId(vecServ, tamServ, id)==-1)
         {
             printf("\nServicio no registrado!!!\n");
             printf("\nIngrese Id servicio: ");
             fflush(stdin);
             scanf("%d",&id);
-            indiceServicio=buscarServicioPorId(vecServ, tamServ, id);
+        }
+
+        indiceServicio=buscarServicioPorId(vecServ, tamServ, id);
+
+        if(indiceServicio == -1)
+        {
+            vecTrabajo[indice].idServicio=id;
         }
 
         vecTrabajo[indice].fechaTrabajo.dia=obtenerNumeroEntre(31, 1, "## Ingrese dia: ");
