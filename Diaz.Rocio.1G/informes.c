@@ -18,7 +18,7 @@ int menuInformes()
     printf("    1_ Listar autos por color.\n");
     printf("    2_ Mostrar autos de marca seleccionada.\n");
     printf("    3_ Mostrar todos los trabajos aplicado a un auto.\n");
-    printf("    4_ Listar autos que no tuvieron trabajos.\n");
+    //printf("    4_ Listar autos que no tuvieron trabajos.\n");
     printf("    5_ Importe total de trabajos realizados a un auto.\n");
     printf("    6_ Mostrar servicio mas pedido.\n");
     printf("    7_ Mostrar recaudacion en fecha especifica.\n");
@@ -56,7 +56,7 @@ void mostrarAutosPorColor(eAuto lista[], int tam, eColor color[], int tamColor, 
     {
         system("cls");
         printf("   ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
-        printf("\n");
+        printf("\n\n");
         for(int i=0; i<tam; i++)
         {
             if(lista[i].ocupado == 1 && lista[i].idColor == idColor)
@@ -64,6 +64,8 @@ void mostrarAutosPorColor(eAuto lista[], int tam, eColor color[], int tamColor, 
                 mostrarAuto(lista[i],color, tamColor, marca, tamMarca);
             }
         }
+
+        printf("\n\n");
     }
 }
 
@@ -89,7 +91,7 @@ void mostrarAutosPorMarca(eAuto lista[], int tam, eColor color[], int tamColor, 
     {
         system("cls");
         printf("   ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
-        printf("\n");
+        printf("\n\n");
         for(int i=0; i<tam; i++)
         {
             if(lista[i].ocupado==1 && lista[i].idMarca==idMarca)
@@ -97,6 +99,7 @@ void mostrarAutosPorMarca(eAuto lista[], int tam, eColor color[], int tamColor, 
                 mostrarAuto(lista[i],color, tamColor, marca, tamMarca);
             }
         }
+        printf("\n\n");
     }
 }
 
@@ -120,7 +123,7 @@ void trabajosUnAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrab
     {
         system("cls");
         printf(" ID    PATENTE    TRABAJO   FECHA");
-        printf("\n");
+        printf("\n\n");
 
         for(int i=0; i<tamT; i++)
         {
@@ -129,6 +132,7 @@ void trabajosUnAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrab
                 mostrarTrabajo(listT[i], listaS, tamS);
             }
         }
+        printf("\n\n");
     }
 }
 
@@ -172,7 +176,7 @@ void importePorAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrab
     {
         system("cls");
         printf(" ID    PATENTE    TRABAJO   FECHA");
-        printf("\n");
+        printf("\n\n");
 
         for(int i=0; i<tamT; i++)
         {
@@ -190,25 +194,27 @@ void importePorAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrab
     }
 }
 
-void servicioMasPedido(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS)
+void servicioMasPedido(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS, eAuto listaA[], int tamA)
 {
-
     int cont[tamS];
     int flag=0;
-    int mayor;
+    int max;
 
 
     for(int i=0; i<tamS; i++)
     {
-        cont[i] = 0;
+        cont[i]=0;
 
-        for(int j=0; j<tamT; j++)
-        {
-            if(listaS[i].idServicio==listaT[j].idServicio && listaT[j].ocupado==1)
+            for(int j=0; j<tamT; j++)
             {
-                cont[i]++;
+                for(int k=0; k<tamA; k++)
+                {
+                    if(listaT[j].ocupado==1 && listaT[j].idServicio==listaS[i].idServicio && stricmp(listaT[j].patente,listaA[k].patente)==0)
+                    {
+                        cont[i]++;
+                    }
+                }
             }
-        }
     }
 
     for(int i=0; i<tamS; i++)
@@ -217,24 +223,101 @@ void servicioMasPedido(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS
         {
             if(flag == 0 || cont[i]>cont[j])
             {
-                mayor=cont[i];
+                max=cont[i];
                 flag=1;
             }
             else
             {
                 if(cont[i]<cont[j])
                 {
-                    mayor=cont[j];
+                    max=cont[j];
                 }
             }
         }
     }
 
-    for(int i=0 ; i<tamS;i++)
+    printf("\n\n");
+
+    for(int i=0; i<tamS; i++)
     {
-        if( cont[i] >= mayor)
+        if(cont[i] >= max)
         {
-            printf("El servicio mas popular es : %s con %d trabajos\n", listaS[i].nombreServicio,cont[i]);
+            printf("El servicio mas solicitado es %s con %d trabajos\n", listaS[i].nombreServicio,cont[i]);
         }
+    }
+
+    printf("\n\n");
+
+}
+
+void totalPorFecha(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS)
+{
+    int dia;
+    int mes;
+    int anio;
+    int cont=0;
+    int acumulador=0;
+
+        dia=obtenerNumeroEntre(31, 1, "## Ingrese dia: ");
+        mes=obtenerNumeroEntre(12, 1, "## Ingrese mes: ");
+        anio=obtenerNumeroIgualA(2019, "## Ingresar anio: ");
+        printf("\n\n");
+
+        printf(" ID    PATENTE    TRABAJO   FECHA");
+        printf("\n\n");
+
+        for (int i=0; i<tamS; i++)
+        {
+            for(int j=0; j<tamT; j++)
+            {
+                if(listaS[i].idServicio == listaT[j].idServicio && listaT[j].fechaTrabajo.dia==dia && listaT[j].fechaTrabajo.mes==mes && listaT[j].fechaTrabajo.anio==anio && listaT[j].ocupado==1)
+                {
+                    mostrarTrabajo(listaT[j], listaS, tamS);
+                    acumulador+=listaS[i].precio;
+                    cont++;
+                }
+            }
+        }
+
+        if(cont==0)
+        {
+            printf("No hay servicios solicitados en la fecha %02d/%02d/%d\n\n",dia,mes,anio);
+        }
+
+         printf("\nEl total acumulado en la fecha de %02d/%02d/%d es de $%d\n\n",dia,mes,anio,acumulador);
+}
+
+void mostrarAutosPorTrabajo(eAuto listaA[], int tamA, eTrabajo listaT[], int tamT, eServicio listaS[], int tamS)
+{
+    int idServicio;
+    int indice;
+
+    mostrarServicios(listaS, tamS);
+    printf("\nIngrese el Id del servicio: ");
+    scanf("%d",&idServicio);
+
+
+    while(buscarServicioPorId(listaS, tamS, idServicio)==-1)
+    {
+        printf("\nNo existe ese id!!!\n");
+        printf("\nIngrese el Id del servicio: ");
+        scanf("%d",&idServicio);
+    }
+
+    indice=buscarServicioPorId(listaS, tamS, idServicio);
+
+    if(indice != -1)
+    {
+        system("cls");
+        printf("   ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
+        printf("\n\n");
+        for(int i=0; i<tam; i++)
+        {
+            if(listaT[i].ocupado == 1 && listaT[i].idServicio == idServicio)
+            {
+                mostrarTrabajo(listaT[i], listaS, tamS);
+            }
+        }
+        printf("\n\n");
     }
 }

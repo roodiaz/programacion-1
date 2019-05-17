@@ -9,9 +9,9 @@
 
 typedef struct
 {
-   int dia;
-   int mes;
-   int anio;
+    int dia;
+    int mes;
+    int anio;
 
 } eFecha;
 
@@ -119,13 +119,13 @@ int main()
             mostrarSectoresConEmpleados(lista, TAM, sectores, TAMSEC);
             system("pause");
             break;
-         case 7:
+        case 7:
             //printf("\nListar empleados\n\n");
             mostrarCantEmpleadosXSector(lista, TAM, sectores, TAMSEC);
             system("pause");
             break;
 
-         case 8:
+        case 8:
             //printf("\nListar empleados\n\n");
             SectorMasEmpleados(lista, TAM, sectores, TAMSEC);
             system("pause");
@@ -187,11 +187,12 @@ void mostrarEmpleado(eSector sectores[], int tam, eEmpleado emp)
     char nombreSector[20];
     int consigioNombre;
 
-   consigioNombre = obtenerSector(sectores, tam, emp.idSector, nombreSector);
+    consigioNombre = obtenerSector(sectores, tam, emp.idSector, nombreSector);
 
-    if( !consigioNombre){
-         strcpy(nombreSector, "Sin definir");
-     }
+    if( !consigioNombre)
+    {
+        strcpy(nombreSector, "Sin definir");
+    }
     printf("   %d   %10s     %c     %.2f     %02d/%02d/%4d    %s\n", emp.legajo, emp.nombre, emp.sexo, emp.sueldo, emp.fechaIngreso.dia, emp.fechaIngreso.mes, emp.fechaIngreso.anio, nombreSector);
 
 }
@@ -318,7 +319,8 @@ int obtenerSector(eSector sectores[], int tam, int idSector, char desc[])
 
     int todoOk = 0;
 
-    for(int i=0; i < tam; i++)    {
+    for(int i=0; i < tam; i++)
+    {
 
         if(idSector == sectores[i].id)
         {
@@ -337,10 +339,13 @@ void mostrarSectoresConEmpleados(eEmpleado empleados[], int tam, eSector sectore
 {
     system("cls");
 
-    for(int i=0; i < tamSec; i++){
+    for(int i=0; i < tamSec; i++)
+    {
         printf("Sector: %s\n\n", sectores[i].descripcion);
-        for(int j=0; j < tam; j++){
-            if( empleados[j].idSector == sectores[i].id && empleados[j].ocupado== 1){
+        for(int j=0; j < tam; j++)
+        {
+            if( empleados[j].idSector == sectores[i].id && empleados[j].ocupado== 1)
+            {
                 mostrarEmpleado(sectores, tamSec, empleados[j]);
             }
         }
@@ -352,12 +357,15 @@ void mostrarCantEmpleadosXSector(eEmpleado empleados[], int tam, eSector sectore
 {
     int contador;
 
-    for(int i=0; i < tamSec; i++){
+    for(int i=0; i < tamSec; i++)
+    {
         contador = 0;
         printf("Sector: %s\n\n", sectores[i].descripcion);
 
-        for(int j=0; j < tam; j++){
-            if( sectores[i].id == empleados[j].idSector && empleados[j].ocupado == 1){
+        for(int j=0; j < tam; j++)
+        {
+            if( sectores[i].id == empleados[j].idSector && empleados[j].ocupado == 1)
+            {
                 contador++;
             }
         }
@@ -366,32 +374,38 @@ void mostrarCantEmpleadosXSector(eEmpleado empleados[], int tam, eSector sectore
     }
 }
 
-void mostrarSectores( eSector sectores[], int tam){
+void mostrarSectores( eSector sectores[], int tam)
+{
 
     printf("\n    Sectores\n");
     printf(" id     descripcion\n\n");
 
-    for(int i=0; i < tam; i++){
+    for(int i=0; i < tam; i++)
+    {
         printf("  %d      %10s\n", sectores[i].id, sectores[i].descripcion);
     }
     printf("\n\n");
 }
 
 
-void SectorMasEmpleados( eEmpleado empleados[], int tam, eSector sectores[], int tamSec){
+void SectorMasEmpleados( eEmpleado empleados[], int tam, eSector sectores[], int tamSec)
+{
 
 
-int totales[tamSec];
-int mayor;
-int flag = 0;
+    int totales[tamSec];
+    int mayor;
+    int flag = 0;
 
 
 
-    for(int i=0; i < tamSec; i++){
+    for(int i=0; i < tamSec; i++)
+    {
 
-          totales[i] = 0;
-        for(int j=0; j < tam; j++){
-            if( sectores[i].id == empleados[j].idSector && empleados[j].ocupado == 1){
+        totales[i] = 0;
+        for(int j=0; j < tam; j++)
+        {
+            if( sectores[i].id == empleados[j].idSector && empleados[j].ocupado == 1)
+            {
                 totales[i]++;
             }
         }
@@ -399,19 +413,23 @@ int flag = 0;
 
     }
 
-     for(int i=0; i < tamSec; i++){
-            if( flag == 0 || mayor < totales[i]){
-                mayor = totales[i];
-                flag = 1;
-            }
-     }
+    for(int i=0; i < tamSec; i++)
+    {
+        if( flag == 0 || mayor < totales[i])
+        {
+            mayor = totales[i];
+            flag = 1;
+        }
+    }
 
-     printf("Cantidad mayor de empleados %d\n\n", mayor);
-     printf("En el o los siguientes sectore\n\n");
+    printf("Cantidad mayor de empleados %d\n\n", mayor);
+    printf("En el o los siguientes sectore\n\n");
 
-      for(int i=0; i < tamSec; i++){
-            if( totales[i] == mayor){
-                printf("%s\n", sectores[i].descripcion);
-            }
-      }
+    for(int i=0; i < tamSec; i++)
+    {
+        if( totales[i] == mayor)
+        {
+            printf("%s\n", sectores[i].descripcion);
+        }
+    }
 }

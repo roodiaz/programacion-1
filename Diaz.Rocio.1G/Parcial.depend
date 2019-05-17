@@ -1,48 +1,5 @@
 # depslib dependency file v1.0
-1557716199 source:c:\users\rocio\desktop\diaz.rocio.1g\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<ctype.h>
-	<conio.h>
-	"autos.h"
-	"trabajos.h"
-
-1557715340 source:c:\users\rocio\desktop\diaz.rocio.1g\inputdiaz.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	<time.h>
-	"inputDiaz.h"
-
-1557715349 c:\users\rocio\desktop\diaz.rocio.1g\inputdiaz.h
-
-1557716745 source:c:\users\rocio\desktop\diaz.rocio.1g\autos.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-
-1557716745 source:c:\users\rocio\desktop\diaz.rocio.1g\trabajos.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-	"trabajos.h"
-
-1557715725 c:\users\rocio\desktop\diaz.rocio.1g\autos.h
-
-1557716745 c:\users\rocio\desktop\diaz.rocio.1g\trabajos.h
-
-1557980654 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.c
+1558060316 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -56,6 +13,21 @@
 
 1557965780 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.h
 
+1557719968 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.h
+
+1558051723 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<conio.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+	"informes.h"
+
+1558051723 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\informes.h
+
 1557968367 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\inputdiaz.c
 	<stdio.h>
 	<stdlib.h>
@@ -65,7 +37,7 @@
 	<time.h>
 	"inputDiaz.h"
 
-1557980409 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\main.c
+1558051723 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -75,9 +47,7 @@
 	"trabajos.h"
 	"informes.h"
 
-1557719968 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.h
-
-1557979650 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.c
+1558060318 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -87,135 +57,4 @@
 	"autos.h"
 	"trabajos.h"
 	"inputDiaz.h"
-
-1557789983 source:c:\users\alumno\desktop\diaz.rocio.1g\autos.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-	"trabajos.h"
-
-1557784655 c:\users\alumno\desktop\diaz.rocio.1g\inputdiaz.h
-
-1557784070 c:\users\alumno\desktop\diaz.rocio.1g\autos.h
-
-1557783305 c:\users\alumno\desktop\diaz.rocio.1g\trabajos.h
-
-1557784656 source:c:\users\alumno\desktop\diaz.rocio.1g\inputdiaz.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	<time.h>
-	"inputDiaz.h"
-
-1557791531 source:c:\users\alumno\desktop\diaz.rocio.1g\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<ctype.h>
-	<conio.h>
-	"autos.h"
-	"trabajos.h"
-	"informes.h"
-
-1557788233 source:c:\users\alumno\desktop\diaz.rocio.1g\trabajos.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-	"trabajos.h"
-	"inputDiaz.h"
-
-1557788517 c:\users\alumno\desktop\diaz.rocio.1g\informes.h
-
-1557791200 source:c:\users\alumno\desktop\diaz.rocio.1g\informes.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-	"trabajos.h"
-	"informes.h"
-
-1557789983 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\autos.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-	"trabajos.h"
-
-1557784655 c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\inputdiaz.h
-
-1557784070 c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\autos.h
-
-1557783305 c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\trabajos.h
-
-1557792102 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\informes.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-	"trabajos.h"
-	"informes.h"
-
-1557788517 c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\informes.h
-
-1557784656 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\inputdiaz.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	<time.h>
-	"inputDiaz.h"
-
-1557791531 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\main.c
-	<stdio.h>
-	<stdlib.h>
-	<string.h>
-	<ctype.h>
-	<conio.h>
-	"autos.h"
-	"trabajos.h"
-	"informes.h"
-
-1557788233 source:c:\users\alumno\desktop\programacion-1\diaz.rocio.1g\trabajos.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-	"trabajos.h"
-	"inputDiaz.h"
-
-1557974914 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\informes.h
-
-1557979315 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\informes.c
-	<stdio.h>
-	<stdlib.h>
-	<ctype.h>
-	<conio.h>
-	<string.h>
-	"inputDiaz.h"
-	"autos.h"
-	"trabajos.h"
-	"informes.h"
 

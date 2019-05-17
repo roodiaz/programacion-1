@@ -11,4 +11,8 @@ void autosSinTrabajos(eAuto listA[], int tamA, eTrabajo listaT[], int tamT, eCol
 
 void importePorAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrabajo listT[], int tamT, eColor listC[], int tamC, eMarca listM[], int tamM);
 
-void servicioMasPedido(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS);
+void servicioMasPedido(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS, eAuto listaA[], int tamA);
+
+void totalPorFecha(eTrabajo listaT[], int tamT, eServicio listaS[], int tamS);
+
+void mostrarAutosPorTrabajo(eAuto listaA[], int tamA, eTrabajo listaT[], int tamT, eServicio listaS[], int tamS);

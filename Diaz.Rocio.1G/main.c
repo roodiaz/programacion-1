@@ -115,7 +115,15 @@ int main()
                 system("pasue");
                 break;
             case 6:
-                servicioMasPedido(listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO);
+                servicioMasPedido(listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO, listaAuto, TAMAUTO);
+                system("pause");
+                break;
+            case 7:
+                totalPorFecha(listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO);
+                system("pause");
+                break;
+            case 8:
+                mostrarAutosPorTrabajo(listaAuto, TAMAUTO, listTrabajo, TAMTRABAJO, listaServicio, TAMSERVICIO);
                 system("pause");
                 break;
             }

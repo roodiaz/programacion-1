@@ -64,7 +64,7 @@ void mostrarMarcas(eMarca lista[], int tam)
 
     system("cls");
     printf("ID      MARCAS");
-    printf("\n");
+    printf("\n\n");
 
     for(int i=0; i<tam; i++)
     {
@@ -121,7 +121,7 @@ void mostrarColores(eColor lista[], int tam)
 
     system("cls");
     printf("ID      COLOR");
-    printf("\n");
+    printf("\n\n");
 
     for(int i=0; i<tam; i++)
     {
@@ -154,7 +154,7 @@ void mostrarAutos(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, 
 
     system("cls");
     printf("   ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
-    printf("\n");
+    printf("\n\n");
     for(int i=0; i<tamAuto; i++)
     {
         if(vecAuto[i].ocupado==1)

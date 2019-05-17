@@ -55,7 +55,7 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
 
     system("cls");
     printf("ID      PATENTE   TRABAJO   FECHA");
-    printf("\n");
+    printf("\n\n");
 
     for(int i=0; i<tamTrabajo; i++)
     {
@@ -83,7 +83,7 @@ void mostrarServicios(eServicio vec[], int tam)
 
     system("cls");
     printf("ID      SERVICIO   PRECIO");
-    printf("\n");
+    printf("\n\n");
 
     for(int i=0; i<tam; i++)
     {
@@ -178,6 +178,8 @@ void altaTrabajo(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[], int
         vecTrabajo[indice].fechaTrabajo.anio=obtenerNumeroIgualA(2019, "## Ingresar anio: ");
 
         vecTrabajo[indice].ocupado=1;
+
+        printf("\nTrabajo guardado con exito!!!\n\n");
     }
     else
     {
