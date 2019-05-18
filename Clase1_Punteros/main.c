@@ -102,6 +102,8 @@ int main()
     mostrarEmpleados(lista,4);
 
 
+
+
     return 0;
 }
 
@@ -160,4 +162,8 @@ void mostrarEmpleados(eEmpleado* vec, int tam)
     {
         mostrarEmpleado(vec+i);
     }
+
+   // eEmpleado x = *(vec+1); // para volver a usar .
+   // printf("%s",x.nombre);
+
 }
