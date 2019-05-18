@@ -11,7 +11,7 @@
 #define TAMMARCA 5
 #define TAMCOLOR 5
 #define TAMSERVICIO 5
-#define TAMTRABAJO 37
+#define TAMTRABAJO 38
 
 void hardCodearAutos(eAuto vec[], int tam);
 void hardCodearTrabajos(eTrabajo vec[], int tam);

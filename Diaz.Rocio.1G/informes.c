@@ -140,14 +140,14 @@ void autosSinTrabajos(eAuto listA[], int tamA, eTrabajo listaT[], int tamT, eCol
 {
 
     system("cls");
-    printf("   ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
+    printf("ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
     printf("\n");
 
     for(int i=0; i<tamA; i++)
     {
         for(int j=0; j<tamT; j++)
         {
-            if(stricmp(listaT[j].patente, listA[i].patente)==0 && listA[i].ocupado==1 && listaT[j].ocupado!=1)
+            if(stricmp(listaT[j].patente, listA[i].patente)!=0 && listA[i].ocupado==1 && listaT[j].ocupado==1)
             {
                 mostrarAuto(listA[i], listaC, tamC, listaM, tamM);
             }
