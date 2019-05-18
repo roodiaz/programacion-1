@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1558136946 source:c:\users\alumno\desktop\programacion-1\clase1_punteros\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1558135583 source:c:\users\alumno\desktop\programacion-1\clase1_punteros\practica funciones.c
+	<stdio.h>
+	<stdlib.h>
+
