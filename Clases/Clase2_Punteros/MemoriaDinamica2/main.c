@@ -3,22 +3,31 @@
 
 int main()
 {
-    int* x[5];
+    int* arrayInt;
 
-    x[5]=(int*)malloc(sizeof(int));
+    arrayInt=(int*)malloc(sizeof(int)*5);
 
-
-    if(x== NULL)
+    if(arrayInt== NULL)
     {
         printf("No se consiguio espacio\n");
         system("pause");
         exit(1);
     }
 
-    x[]={1, 2, 3, 4, 5};
-    printf("%d",*x);
-    free(x);
+    for(int i=0; i<5; i++)
+    {
+        printf("Ingrese un numero: ");
+        scanf("%d",arrayInt+i);
+    }
 
+    printf("\n");
+
+    for(int i=0; i<5; i++)
+    {
+        printf("%d\n",*(arrayInt+i));
+    }
+
+    free(arrayInt);
 
     return 0;
 }
