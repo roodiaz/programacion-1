@@ -54,9 +54,9 @@ void mostrarTrabajos(eTrabajo vecTrabajo[], int tamTrabajo, eServicio vecServ[],
     int cont=0;
 
     system("cls");
-    printf("ID      PATENTE   TRABAJO    FECHA\n");
-    printf("--      --------  ------     -----");
-    printf("\n");
+    printf("ID     PATENTE    TRABAJO      FECHA\n");
+    printf("--     -------    -------      -----");
+    printf("\n\n");
 
     for(int i=0; i<tamTrabajo; i++)
     {

@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1558745480 source:c:\users\alumno\desktop\programacion-1\clases\clase3_archivos\archivos2\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1558745841 source:c:\users\alumno\desktop\programacion-1\clases\clase3_archivos\eautobin\main.c
+	<stdio.h>
+	<stdlib.h>
+

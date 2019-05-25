@@ -13,14 +13,14 @@ int menuInformes()
     int opcion;
 
     system("cls");
-    printf("#####  Menu de Informes  ####\n\n");
+    printf("    #####  Menu de Informes  ####\n\n\n");
 
     printf("    1_ Listar autos por color.\n");
     printf("    2_ Mostrar autos de marca seleccionada.\n");
     printf("    3_ Mostrar todos los trabajos aplicado a un auto.\n");
-    printf("    4_ Listar autos que no tuvieron trabajos.\n");
+    printf("    4_ (corregitr)Listar autos que no tuvieron trabajos.\n");
     printf("    5_ Importe total de trabajos realizados a un auto.\n");
-    printf("    6_ Mostrar servicio mas pedido.\n");
+    printf("    6_ (corregir)Mostrar servicio mas pedido.\n");
     printf("    7_ Mostrar recaudacion en fecha especifica.\n");
     printf("    8_ Mostrar autos que realizaron encerado y fecha.\n");
     printf("    9_ Trabajos realizados a autos blancos.\n");
@@ -140,14 +140,15 @@ void autosSinTrabajos(eAuto listA[], int tamA, eTrabajo listaT[], int tamT, eCol
 {
 
     system("cls");
-    printf("ID       Patente      Marca    Color     Modelo    Nombre   Sexo");
-    printf("\n");
+    printf("ID     Patente      Marca      Color    Modelo     Nombre     Sexo\n");
+    printf("--     -------      -----      -----    ------     ------     ----");
+    printf("\n\n");
 
     for(int i=0; i<tamA; i++)
     {
         for(int j=0; j<tamT; j++)
         {
-            if(stricmp(listaT[j].patente, listA[i].patente)!=0 && listA[i].ocupado==1 && listaT[j].ocupado==1)
+            if(stricmp(listaT[j].patente, listA[i].patente)!=0 && listA[i].ocupado==1 && listaT[j].ocupado==0)
             {
                 mostrarAuto(listA[i], listaC, tamC, listaM, tamM);
             }
@@ -306,13 +307,36 @@ void mostrarAutosPorTrabajo(eAuto listaA[], int tamA, eTrabajo listaT[], int tam
     }
 }
 
+int validarColor(eColor vec[],int tam)
+{
+    int indice=-1;
+    int id;
+
+    mostrarColores(vec, tam);
+    printf("\nIngrese el Id del color: ");
+    scanf("%d",&id);
+
+    while(buscarColorPorId(vec, tam, id)==-1)
+    {
+        printf("\nNo existe ese id!!!\n");
+        printf("\nIngrese el Id del color: ");
+        scanf("%d",&id);
+    }
+
+    if(buscarColorPorId(vec, tam, id)==1)
+    {
+        indice=1;
+    }
+
+    return indice;
+}
 void trabajosPorColor(eServicio listaS[], int tamS, eTrabajo listT[], int tamT, eColor listC[], int tamC, eAuto listaA[], int tamA)
 {
     int indice;
     int id;
     int cont=0;
 
-    mostrarColores(listC, tamC);
+    /*mostrarColores(listC, tamC);
     printf("\nIngrese el Id del color: ");
     scanf("%d",&id);
 
@@ -323,12 +347,14 @@ void trabajosPorColor(eServicio listaS[], int tamS, eTrabajo listT[], int tamT, 
         scanf("%d",&id);
     }
 
-    indice=buscarColorPorId(listC, tamC, id);
+    indice=buscarColorPorId(listC, tamC, id);*/
+
+    indice=validarColor(listC,tamC);
 
     if(indice != 1)
     {
         system("cls");
-        printf(" ID    PATENTE    TRABAJO   FECHA");
+        printf("ID     PATENTE     TRABAJO     FECHA");
         printf("\n\n");
 
         for(int i=0; i<tamT; i++)
@@ -414,8 +440,8 @@ void autosConTrabajoXFecha(eAuto listaA[], int tamA, eTrabajo listaT[], int tamT
     printf("\n\n");
 
     system("cls");
-    printf("ID     Patente      Marca      Color     Modelo     Nombre     Sexo\n");
-    printf("--     -------      -----      -----     ------     ------     ----");
+    printf("ID     Patente      Marca       Color     Modelo     Nombre     Sexo\n");
+    printf("--     -------      -----       -----     ------     ------     ----");
     printf("\n\n");
 
     for (int i=0; i<tamA; i++)

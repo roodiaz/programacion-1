@@ -149,7 +149,7 @@ void mostrarAuto(eAuto vecAuto, eColor vecColor[], int tamColor, eMarca vecMarca
     obtenerColores(vecColor, tamColor, vecAuto.idColor, nombreColor);
     obtenerMarcas(vecMarca, tamMarca, vecAuto.idMarca, nombreMarca);
 
-    printf("%02d  %10s  %10s  %10s  %7d  %10s  %5c\n",vecAuto.idAuto,vecAuto.patente, nombreMarca, nombreColor, vecAuto.anioAuto, vecAuto.nombre, vecAuto.sexo);
+    printf("%02d  %10s  %10s  %8s  %7d  %10s  %5c\n",vecAuto.idAuto,vecAuto.patente, nombreMarca, nombreColor, vecAuto.anioAuto, vecAuto.nombre, vecAuto.sexo);
 }
 
 void mostrarAutos(eAuto vecAuto[],int tamAuto, eColor vecColor[], int tamColor, eMarca vecMarca[], int tamMarca)
@@ -416,8 +416,6 @@ void ordenarAutos(eAuto vec[], int tam)
         }
     }
 }
-
-
 
 int buscarMarcaPorId(eMarca vec[], int tam, int idMarca)
 {
