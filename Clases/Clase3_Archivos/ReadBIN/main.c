@@ -36,7 +36,7 @@ int main()
        cant=fread(lista+cont,sizeof(eAuto),1,f);
        if(cant<1)
        {
-            if(feof(f)==1)
+            if(feof(f))
             {
                 break;
             }
