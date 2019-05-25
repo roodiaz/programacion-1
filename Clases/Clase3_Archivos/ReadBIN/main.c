@@ -17,6 +17,7 @@ int main()
 
     eAuto* lista=(eAuto*)malloc(3*sizeof(eAuto));
     int cont=0;
+    int cant;
 
    // mostrarAutos(lista,3);
 
@@ -32,7 +33,19 @@ int main()
 
    while(!feof(f))
    {
-       fread(lista+cont,sizeof(eAuto),1,f);
+       cant=fread(lista+cont,sizeof(eAuto),1,f);
+       if(cant<1)
+       {
+            if(feof(f)==1)
+            {
+                break;
+            }
+            else
+            {
+                printf("Se produjo un error al leer el archivo");
+                break;
+            }
+       }
        cont++;
    }
 
