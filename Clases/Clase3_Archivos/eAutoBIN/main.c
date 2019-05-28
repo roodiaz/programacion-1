@@ -54,7 +54,6 @@ void mostrarAuto(eAuto* unAuto)
     {
         printf("%d   %8s   %.2f\n",unAuto->id,unAuto->marca,unAuto->cilindrada);
     }
-
 }
 
 void mostrarAutos(eAuto* lista, int tam)

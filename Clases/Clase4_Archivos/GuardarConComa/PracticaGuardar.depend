@@ -1,0 +1,9 @@
+# depslib dependency file v1.0
+1559002685 source:c:\users\alumno\desktop\programacion-1\clases\practicaguardar\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1559002709 source:c:\users\alumno\desktop\programacion-1\clases\clase4_archivos\guardarconcoma\main.c
+	<stdio.h>
+	<stdlib.h>
+
