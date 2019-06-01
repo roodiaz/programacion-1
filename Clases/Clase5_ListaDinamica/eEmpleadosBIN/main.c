@@ -22,13 +22,14 @@ int altaEmpleado(eEmpleado** vec, int size);
 void guardarEmpleadosBinario(eEmpleado** vec, int size);
 void cargarEmpleados(eEmpleado** vec, int size);
 void imprimirEmpleados(eEmpleado** vec, int size);
-int agrandarLista(eEmpleado** vec, int size);
+
 
 int main()
 {
     int size = 0;
     char seguir = 's';
     eEmpleado** lista = (eEmpleado**) malloc(sizeof(eEmpleado*));
+    eEmpleado** auxLista;
 
     if( lista == NULL)
     {
@@ -49,14 +50,18 @@ int main()
         case 2:
             if(altaEmpleado(lista, size) == 1)
             {
-                size++;
-                if(agrandarLista(lista, size)==1)
+                size = size+1;
+                auxLista=(eEmpleado**)realloc(lista,sizeof(eEmpleado*)*(size+1));
+
+                if(auxLista != NULL)
                 {
+                    lista=auxLista;
                     printf("Alta realizada con exito!!\n\n");
                 }
                 else
                 {
                     printf("Hubo un error al agrandar la lista.\n\n");
+                    exit(1);
                 }
             }
             system("pause");
@@ -274,8 +279,8 @@ void guardarEmpleadosBinario(eEmpleado** vec, int size)
 
 void cargarEmpleados(eEmpleado** vec, int size)
 {
-    int indice;
     int cant;
+    eEmpleado** aux;
     FILE* f;
 
     f = fopen("./empleados.bin", "rb");
@@ -287,10 +292,7 @@ void cargarEmpleados(eEmpleado** vec, int size)
     }
     while( !feof(f))
     {
-
-        indice = buscarLibre(vec, size);
-
-        cant = fread( (vec + indice), sizeof(eEmpleado), 1, f);
+        cant = fread((*(vec + size)), sizeof(eEmpleado), 1, f);
 
         if( cant < 1)
         {
@@ -303,22 +305,15 @@ void cargarEmpleados(eEmpleado** vec, int size)
                 printf("Problemas para leer el archivo");
             }
         }
+        size++;
+        aux=(eEmpleado**)realloc(*vec,sizeof(eEmpleado*)*(size+1));
+
+        if(aux != NULL)
+        {
+            *vec=aux;
+        }
     }
+
     fclose(f);
 }
-
-int agrandarLista(eEmpleado** vec, int size)
-{
-    int todoOk=0;
-    eEmpleado** aux=(eEmpleado**)realloc(vec, sizeof(eEmpleado*)*(size+1));
-
-    if(aux!=NULL)
-    {
-        vec=aux;
-        todoOk=1;
-    }
-
-    return todoOk;
-}
-
 
