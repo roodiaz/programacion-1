@@ -7,7 +7,7 @@ void mostrarAutosPorMarca(eAuto lista[], int tam, eColor color[], int tamColor, 
 
 void trabajosUnAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrabajo listT[], int tamT, eColor listC[], int tamC, eMarca listM[], int tamM);
 
-void autosSinTrabajos(eAuto listA[], int tamA, eTrabajo listaT[], int tamT, eColor listaC[], int tamC, eMarca listaM[], int tamM);
+int listarAutosSinTrabajos(eAuto autos[], int tam, eMarca marcas[], int tamMarcas, eColor colores[], int tamColores, eTrabajo trabajos[], int tamTrabajos);
 
 void importePorAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrabajo listT[], int tamT, eColor listC[], int tamC, eMarca listM[], int tamM);
 

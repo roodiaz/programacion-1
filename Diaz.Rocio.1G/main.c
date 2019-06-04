@@ -108,7 +108,7 @@ int main()
                     system("pause");
                     break;
                 case 4:
-                    autosSinTrabajos(listaAuto, TAMAUTO, listTrabajo, TAMTRABAJO, listaColor, TAMCOLOR, listaMarcas, TAMMARCA);
+                    listarAutosSinTrabajos(listaAuto, TAMAUTO, listaMarcas, TAMMARCA, listaColor, TAMCOLOR, listTrabajo, TAMTRABAJO);
                     system("pause");
                     break;
                 case 5:

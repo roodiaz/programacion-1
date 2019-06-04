@@ -250,6 +250,7 @@ void imprimirEmpleados(eEmpleado** vec, int size)
             }
             fprintf(f,"\n\n");
         }
+
         fclose(f);
     }
 }
@@ -271,7 +272,6 @@ void guardarEmpleadosBinario(eEmpleado** vec, int size)
                     fwrite( (vec+ i), sizeof(eEmpleado), 1, f);
                 }
             }
-
         }
         fclose(f);
     }

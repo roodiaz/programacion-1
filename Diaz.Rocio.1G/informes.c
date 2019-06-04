@@ -1,8 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <ctype.h>
-#include <conio.h>
 #include <string.h>
+#include <conio.h>
 #include "inputDiaz.h"
 #include "autos.h"
 #include "trabajos.h"
@@ -136,26 +136,67 @@ void trabajosUnAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrab
     }
 }
 
-void autosSinTrabajos(eAuto listA[], int tamA, eTrabajo listaT[], int tamT, eColor listaC[], int tamC, eMarca listaM[], int tamM)
+int listarAutosSinTrabajos(eAuto autos[], int tam, eMarca marcas[], int tamMarcas, eColor colores[], int tamColores, eTrabajo trabajos[], int tamTrabajos)
 {
+    int todoOk = 0;
+    int flag;
+    int contador = 0;
+    char aux[21];
+    int auxComp;
+    char nombreColor[20];
+    char nombreMarca[20];
 
     system("cls");
-    printf("ID     Patente      Marca      Color    Modelo     Nombre     Sexo\n");
-    printf("--     -------      -----      -----    ------     ------     ----");
-    printf("\n\n");
 
-    for(int i=0; i<tamA; i++)
+    printf(" ID        PATENTE           MARCA          COLOR      MODELO\n");
+    printf(" --        -------           -----          -----      ------\n");
+
+    for(int i=0; i < tam; i++)
     {
-        for(int j=0; j<tamT; j++)
+        if(autos[i].idAuto != 0)
         {
-            if(stricmp(listaT[j].patente, listA[i].patente)!=0 && listA[i].ocupado==1 && listaT[j].ocupado==0)
+            strcpy(aux,autos[i].patente);
+        }
+
+        flag = 0;
+
+        for(int j=0; j<tamTrabajos; j++)
+        {
+            if(trabajos[j].idTrabajo != 0)
             {
-                mostrarAuto(listA[i], listaC, tamC, listaM, tamM);
+                auxComp = strcmp(trabajos[j].patente, aux);
+
+                if(auxComp == 0)
+                {
+                    flag = 1;
+
+                }
             }
         }
-    }
-}
 
+        if(flag == 0)
+        {
+
+            obtenerColores(colores, tamColores, autos.idColor, nombreColor);
+            obtenerMarcas(marcas, tamMarcas, autos.idMarca, nombreMarca);
+
+            printf("%02d  %10s  %10s  %8s  %7d  %10s  %5c\n",autos.idAuto,autos.patente, nombreMarca, nombreColor, autos.anioAuto, autos.nombre, autos.sexo);
+            printf("")
+            contador++;
+        }
+    }
+
+    printf("\n\n");C:\Users\alumno\Desktop\programacion-1\Diaz.Rocio.1G\informes.c
+
+    if( contador == 0)
+    {
+        printf("\nNo hay autos que mostrar\n");
+    }
+
+    todoOk = 1;
+
+    return todoOk;
+}
 void importePorAuto(eAuto listA[], int tamA, eServicio listaS[], int tamS, eTrabajo listT[], int tamT, eColor listC[], int tamC, eMarca listM[], int tamM)
 {
     int indicePatente;
