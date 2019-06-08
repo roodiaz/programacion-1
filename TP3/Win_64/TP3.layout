@@ -2,41 +2,14 @@
 <CodeBlocks_layout_file>
 	<FileVersion major="1" minor="0" />
 	<ActiveTarget name="Debug" />
-	<File name="Controller.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="93" topLine="0" />
-		</Cursor>
-	</File>
-	<File name="Employee.c" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="3049" topLine="46" />
-		</Cursor>
-		<Folding>
-			<Collapse line="5" />
-			<Collapse line="42" />
-			<Collapse line="55" />
-			<Collapse line="67" />
-			<Collapse line="80" />
-			<Collapse line="93" />
-			<Collapse line="105" />
-			<Collapse line="117" />
-			<Collapse line="130" />
-			<Collapse line="142" />
-		</Folding>
-	</File>
-	<File name="Employee.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
-		<Cursor>
-			<Cursor1 position="186" topLine="10" />
-		</Cursor>
-	</File>
 	<File name="LinkedList.h" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
 			<Cursor1 position="787" topLine="9" />
 		</Cursor>
 	</File>
-	<File name="main.c" open="1" top="1" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+	<File name="main.c" open="1" top="0" tabpos="1" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1373" topLine="15" />
+			<Cursor1 position="1344" topLine="13" />
 		</Cursor>
 	</File>
 	<File name="parser.c" open="1" top="0" tabpos="2" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
@@ -51,7 +24,27 @@
 	</File>
 	<File name="Controller.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="1" zoom_2="0">
 		<Cursor>
-			<Cursor1 position="1322" topLine="95" />
+			<Cursor1 position="2084" topLine="98" />
+		</Cursor>
+	</File>
+	<File name="Controller.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="93" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="Employee.c" open="1" top="1" tabpos="4" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1741" topLine="34" />
+		</Cursor>
+		<Folding>
+			<Collapse line="5" />
+			<Collapse line="42" />
+			<Collapse line="55" />
+		</Folding>
+	</File>
+	<File name="Employee.h" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="186" topLine="10" />
 		</Cursor>
 	</File>
 </CodeBlocks_layout_file>
