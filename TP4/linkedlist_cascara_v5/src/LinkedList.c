@@ -59,10 +59,9 @@ static Node* getNode(LinkedList* this, int nodeIndex)
     {
         pNode=this->pFirstNode;
 
-        while(nodeIndex>0)
+        for(int i=0; i<nodeIndex; i++)
         {
             pNode=pNode->pNextNode;
-            nodeIndex--;
         }
     }
     return pNode;
@@ -286,6 +285,12 @@ int ll_clear(LinkedList* this)
 int ll_deleteLinkedList(LinkedList* this)
 {
     int returnAux = -1;
+
+    if(this!=NULL)
+    {
+       ll_clear(this);
+       returnAux=0;
+    }
 
     return returnAux;
 }
