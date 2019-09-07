@@ -1,46 +1,55 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void mostrarVector(int vec[], int tam)
-{
-    int max;
-    int posMax;
+#define TAM 5
 
+void mostrarVectorInt(int vec[], int tam)
+{
     for(int i=0; i<tam; i++)
     {
         printf("%d ", vec[i]);
     }
+}
 
-    max=vec[0];
+int obtenerMayor(int vec[],int tam)
+{
+    int max;
+    int flag=0;
 
     for(int i=0; i<tam; i++)
     {
-        if(vec[i] > max)
+        if(vec[i] > max || flag == 0)
         {
             max=vec[i];
-            posMax=i;
+            flag=1;
         }
     }
 
-    printf("\n\nnumero mayor: %d ",max);
-    printf("\n\nposicion numero mayor: %d ",posMax);
-    printf("\n\n");
+    return max;
+}
 
+void cargarVector (int vec[],int tam)
+{
+    for(int i=0; i<tam; i++)
+    {
+        printf("Ingrese numeros: ");
+        scanf("%d",&vec[i]);
+    }
 }
 
 int main()
 {
-    int numeros[5];
+    int max;
+    int numeros[TAM];
 
-    for(int i=0; i<5; i++)
-    {
-        printf("Ingrese numeros: ");
-        scanf("%d",&numeros[i]);
-    }
+    cargarVector (numeros,TAM);
 
+    mostrarVectorInt(numeros,TAM);
+
+    max = obtenerMayor(numeros,TAM);
+
+    printf("\n\nnumero mayor: %d ",max);
     printf("\n\n");
-
-    mostrarVector(numeros, 5);
 
     return 0;
 }
