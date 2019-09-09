@@ -7,18 +7,20 @@ que le anteceden, comenzando desde 0 y mostrar el resultado por pantalla */
 int main()
 {
     int num;
-    int suma=0;
     int cont=0;
+    int suma=0;
 
-    printf("ingrese un numero: ");
+    printf("ingrese numero: ");
     scanf("%d",&num);
 
-    while(cont < num && cont > 0)
+    while(cont < num-1)
     {
-        cont--;
+        cont++;
+        //printf("\n%d\n",cont);
         suma+=cont;
     }
 
-    printf("\nsuma de numeros menores a %d es %d\n",num,suma);
+    printf("\nla suma de los numeros anteriores a %d es de %d\n",num,suma);
+
     return 0;
 }
