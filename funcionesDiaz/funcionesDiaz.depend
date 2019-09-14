@@ -1,11 +1,11 @@
 # depslib dependency file v1.0
-1567660251 source:c:\users\rocio\desktop\programacion-1\funcionesdiaz\main.c
+1568253628 source:c:\users\rocio\desktop\programacion-1\funcionesdiaz\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
 	<ctype.h>
 
-1567660251 source:c:\users\rocio\desktop\programacion-1\funcionesdiaz\funcionesdiaz.c
+1568253607 source:c:\users\rocio\desktop\programacion-1\funcionesdiaz\funcionesdiaz.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>

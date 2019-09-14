@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <conio.h>
-#define TAM 3
+
+#define TAM 15
 
 /* En una empresa se carga por teclado los siguientes datos: nombre del empleado, nacionalidad (A argentino,
 E -extranjero), estudios cursados (1- primaria, 2 - secundario, 3 - universitario) y antigüedad. Se pide emitir
@@ -14,6 +15,8 @@ int main()
     int estudios[TAM];
     int antiguedad[TAM];
     int i=0;
+    float porcentaje=0;
+    int cont=0;
     char nombre[TAM][20];
     char nacionalidad[TAM];
     char seguir;
@@ -63,7 +66,7 @@ int main()
     while(seguir != 'n');
 
     system("cls");
-    printf("nombre   nacionalidad   estudios   antiguedad\n\n");
+    printf(" nombre   nacionalidad   estudios   antiguedad\n\n");
 
     for(int i=0; i<TAM; i++)
     {
@@ -73,13 +76,18 @@ int main()
             {
                 if(antiguedad[i] > 20)
                 {
-                    printf("%s %c %d %d",nombre[i],nacionalidad[i],estudios[i],antiguedad[i]);
+                    printf("%2s %10c %10d %12d\n",nombre[i],nacionalidad[i],estudios[i],antiguedad[i]);
+                    cont++;
                 }
             }
         }
-
     }
 
+    porcentaje+=(float)i;
+    porcentaje=(float)porcentaje/cont;
+
+    printf("\n\ncantidad de empleados extrajeros, con antiguedad mayor a 20 anos y estudios universitrios son %d\n",cont);
+    printf("porcentaje del total de empleados %.2f\n\n",porcentaje);
 
 
 
