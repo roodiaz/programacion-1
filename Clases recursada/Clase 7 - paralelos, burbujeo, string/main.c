@@ -6,8 +6,9 @@
 
 void mostrarAlumno(char nombre[],int legajo, int edad, int nota1, int nota2, char sexo, float promedio)
 {
-    printf("\n%5s  %d     %d       %d        %2d         %c     %.2f",nombre,legajo, edad, nota1, nota2, sexo, promedio);
+    printf("\n%8s  %d     %d       %d        %2d         %c     %.2f",nombre,legajo, edad, nota1, nota2, sexo, promedio);
 }
+
 
 void mostrarAlumnos(char nombre[][20],int legs[], int ages[], int n1[], int n2[], char sexs[], float averages[], int tam)
 {
@@ -19,7 +20,8 @@ void mostrarAlumnos(char nombre[][20],int legs[], int ages[], int n1[], int n2[]
     }
 }
 
-void ordenarSexoLegajo (int legs[], int ages[], int n1[], int n2[], char sexs[], float averages[], int tam)
+
+void ordenarSexoNombre (char nombre[][20], int legs[], int ages[], int n1[], int n2[], char sexs[], float averages[], int tam)
 {
     int auxInt;
     int flag=0;
@@ -31,16 +33,19 @@ void ordenarSexoLegajo (int legs[], int ages[], int n1[], int n2[], char sexs[],
     {
         for(int j=i+1; j<tam; j++)
         {
-            if(sexs[i]<sexs[j])
+            if(sexs[i]>sexs[j])
             {
                 flag=1;
             }
-            else if (sexs[i]==sexs[j] && legs[i]>legs[j])
+            else if (sexs[i]==sexs[j] && stricmp(nombre[i],nombre[j]) > 0)
             {
                 flag=1;
             }
             if(flag)
             {
+                strcpy(auxString,nombre[i]);
+                strcpy(nombre[i],nombre[j]);
+                strcpy(nombre[j],auxString);
 
                 auxInt=legs[i];
                 legs[i]=legs[j];
@@ -70,6 +75,7 @@ void ordenarSexoLegajo (int legs[], int ages[], int n1[], int n2[], char sexs[],
     }
 }
 
+
 int main()
 {
     int legajo[TAM]={5325,7442,5135,6453,1424};
@@ -80,8 +86,8 @@ int main()
     char sexo[TAM]={'m','f','f','m','m'};
     char nomApe[TAM][20]={"juan","josefina","ana","alberto","pepe"};
 
-  //ordenarSexoLegajo(legajo,edad,notas1,notas2,sexo,promedio,TAM);
-  // mostrarAlumnos(legajo,edad,notas1,notas2,sexo,promedio,TAM);
+  ordenarSexoNombre(nomApe,legajo,edad,notas1,notas2,sexo,promedio,TAM);
+   mostrarAlumnos(nomApe,legajo,edad,notas1,notas2,sexo,promedio,TAM);
 
     return 0;
 }
