@@ -6,7 +6,7 @@
 
 int main()
 {
-    int cont=0;
+    int i=0;
     char nombre[20];
     char apellido[20];
     char nomApe[41];
@@ -26,7 +26,7 @@ int main()
     printf("ingrese apellido: ");
     gets(apellido);
 
-     for(int i=0; i<strlen(apellido); i++)
+    for(int i=0; i<strlen(apellido); i++)
     {
         while(strlen(apellido)>19 || isalpha(apellido[i])==0)
         {
@@ -35,21 +35,22 @@ int main()
         }
     }
 
-    strcat(nomApe,apellido);
+    strcpy(nomApe,apellido);
     strcat(nomApe,", ");
     strcat(nomApe,nombre);
 
     strlwr(nomApe);
     nomApe[0]=toupper(nomApe[0]);
 
-    while(nomApe[cont] != '\0')
+    while( nomApe[i] != '\0')
     {
-        if(nomApe[cont]==' ')
+        if(nomApe[i] == ' ')
         {
-            nomApe[cont+1] = toupper(nomApe[cont+1]);
+            nomap[i +1] = toupper(nomap[i+1]);
+
         }
 
-        cont++;
+        i++;
     }
 
     printf("%s",nomApe);
