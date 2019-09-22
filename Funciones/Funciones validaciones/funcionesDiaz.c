@@ -4,6 +4,40 @@
 #include <conio.h>
 #include <ctype.h>
 
+int getStringAlpha(int longMax, int intentos, char* mensaje, char* dondeAsignar)
+{
+    int todoOk = 1;
+    char aux[longMax];
+
+    printf("%s",mensaje);
+    fflush(stdin);
+    gets(aux);
+
+    for(int i=0; i<strlen(aux); i++)
+    {
+        while((isalpha(aux[i])==0) || strlen(aux) > longMax)
+        {
+            intentos--;
+            if(intentos == 0)
+            {
+                todoOk=0;
+                break;
+            }
+            printf("Error. %s",mensaje);
+            fflush(stdin);
+            gets(aux);
+        }
+    }
+
+    if(intentos != 0)
+    {
+        strcpy(dondeAsignar, aux);
+    }
+
+
+    return todoOk;
+}
+
 int getIntRange(int* dondeAsignar, int min, int max, int intentos, char* mensaje)
 {
     int todoOk = 1;
