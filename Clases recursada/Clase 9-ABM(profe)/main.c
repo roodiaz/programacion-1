@@ -23,6 +23,7 @@ typedef struct
     float promedio;
     eFecha fechaIngreso;
     int isEmpty;
+
 } eAlumno;
 
 void mostrarAlumno(eAlumno x);
@@ -35,6 +36,7 @@ int altaAlumno(eAlumno vec[], int tam);
 eAlumno newAlumno(int leg,char nombre[],int edad, char sexo, int nota1, int nota2, eFecha f);
 int bajaAlumno(eAlumno vec[], int tam);
 int ModificarAlumno(eAlumno vec[], int tam);
+void hardcodearAlumnos( eAlumno vec[],int cant);
 int menu();
 
 int main()
@@ -44,7 +46,7 @@ int main()
 
     inicializarAlumnos( lista, TAM);
 
-    hardcodearAlumnos(lista, 4);
+    hardcodearAlumnos(lista, 6);
 
     do
     {
@@ -339,7 +341,7 @@ int ModificarAlumno(eAlumno vec[], int tam){
     int todoOk = 0;
     int legajo;
     int indice;
-    char confirma;
+
     system("cls");
     printf("***** Modificar Alumno *****\n\n");
     printf("Ingrese legajo: ");
@@ -383,5 +385,31 @@ int ModificarAlumno(eAlumno vec[], int tam){
 }
 
 
-void hardcodearAlumnos( eAlumno vec[], int cant);
+void hardcodearAlumnos( eAlumno vec[],int cant)
+{
+     eAlumno datos [15]=
+        {
+            {1234, "Juan", 20, 'm', 4, 6, 5,{16, 9, 2019},0},
+            {1111, "Juana", 19, 'f', 7, 4, 5.5,{20, 3, 2018},0},
+            {1221, "Ariel", 21, 'm', 10, 2, 6,{12, 11, 2013},0},
+            {1001, "Jazmin", 20, 'f', 8, 8, 8,{9, 8, 2018},0},
+            {1020, "Abril", 22, 'f', 4, 5, 4.5,{4, 5, 2015},0},
+            {1234, "Lucas", 22, 'm', 6, 6, 6,{17, 12, 2017},0},
+            {1111, "Rocio", 24, 'f', 7, 5, 6,{23, 11, 2019},0},
+            {1221, "Diego", 21, 'm', 10, 2, 6,{11, 4, 2012},0},
+            {1001, "Mariela", 18, 'f', 8, 9, 8.5,{7, 4, 2011},0},
+            {1020, "Micaela", 23, 'f', 4, 7, 5.5,{8, 3, 2010},0},
+            {1234, "Tomas", 21, 'm', 7, 6, 6.5,{17, 12, 2017},0},
+            {1111, "Camila", 20, 'f', 7, 8, 7.5,{23, 11, 2019},0},
+            {1221, "Lucas", 19, 'm', 10, 4, 7,{11, 4, 2012},0},
+            {1001, "Valentina", 18, 'f', 9, 9, 9,{7, 4, 2011},0},
+            {1020, "Rosario", 22, 'f', 9, 7, 8,{8, 3, 2010},0}
+        };
+
+    for(int i=0; i<cant; i++)
+    {
+        vec[i] = datos[i];
+    }
+
+}
 
