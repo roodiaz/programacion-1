@@ -42,7 +42,7 @@ int buscarAlumno(int legajo, eAlumno vec[], int tam);
 int altaAlumno(eAlumno vec[], int tam, int legajo, eCarrera vecC[], int tamC);
 eAlumno newAlumno(int leg,char nombre[],int edad, char sexo, int nota1, int nota2, eFecha f, int carrera);
 int bajaAlumno(eAlumno vec[], int tam, eCarrera vecC[], int tamC);
-int ModificarAlumno(eAlumno vec[], int tam);
+int ModificarAlumno(eAlumno vec[], int tam, eCarrera vecC[], int tamC);
 int menu();
 int hardcodearAlumnos( eAlumno vec[],int tam,int cant);
 void mostrarCarrera(eCarrera datos);
@@ -77,7 +77,7 @@ int main()
             break;
 
         case 3:
-            ModificarAlumno(lista, TAM);
+            ModificarAlumno(lista, TAM,carreras,TAMC);
             break;
 
         case 4:
@@ -364,7 +364,7 @@ int bajaAlumno(eAlumno vec[], int tam, eCarrera vecC[], int tamC)
 
     return todoOk;
 }
-int ModificarAlumno(eAlumno vec[], int tam)
+int ModificarAlumno(eAlumno vec[], int tam, eCarrera vecC[], int tamC)
 {
 
     int todoOk = 0;
@@ -386,7 +386,7 @@ int ModificarAlumno(eAlumno vec[], int tam)
     else
     {
 
-        //mostrarAlumno(vec[indice]);
+        mostrarAlumno(vec[indice],vecC, tamC);
 
         printf("1- Modificar nota1\n");
         printf("2- Modificar nota2\n");
