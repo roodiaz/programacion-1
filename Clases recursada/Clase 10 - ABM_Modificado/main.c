@@ -41,7 +41,7 @@ int buscarLibre(eAlumno vec[], int tam);
 int buscarAlumno(int legajo, eAlumno vec[], int tam);
 int altaAlumno(eAlumno vec[], int tam, int legajo, eCarrera vecC[], int tamC);
 eAlumno newAlumno(int leg,char nombre[],int edad, char sexo, int nota1, int nota2, eFecha f, int carrera);
-int bajaAlumno(eAlumno vec[], int tam);
+int bajaAlumno(eAlumno vec[], int tam, eCarrera vecC[], int tamC);
 int ModificarAlumno(eAlumno vec[], int tam);
 int menu();
 int hardcodearAlumnos( eAlumno vec[],int tam,int cant);
@@ -73,7 +73,7 @@ int main()
             break;
 
         case 2:
-            bajaAlumno(lista, TAM);
+            bajaAlumno(lista, TAM,carreras, TAMC);
             break;
 
         case 3:
@@ -323,7 +323,7 @@ eAlumno newAlumno(int leg,char nombre[],int edad,char sexo,int nota1,int nota2,e
     return al;
 }
 
-int bajaAlumno(eAlumno vec[], int tam)
+int bajaAlumno(eAlumno vec[], int tam, eCarrera vecC[], int tamC)
 {
     int todoOk = 0;
     int legajo;
@@ -344,7 +344,7 @@ int bajaAlumno(eAlumno vec[], int tam)
     else
     {
 
-        //mostrarAlumno(vec[indice]);
+        mostrarAlumno(vec[indice],vecC, tamC);
 
         printf("\nConfirma baja?");
         fflush(stdin);
