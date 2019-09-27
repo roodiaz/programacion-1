@@ -4,6 +4,36 @@
 #include <conio.h>
 #include <ctype.h>
 
+int confimarSalir(char mensaje[])
+{
+    int retorno;
+    char confirma;
+
+    printf("%s",mensaje);
+    fflush(stdin);
+    confirma=getchar();
+    confirma=tolower(confirma);
+
+    while(confirma != 's' && confirma != 'n')
+    {
+        printf("Error. %s",mensaje);
+        fflush(stdin);
+        confirma=getchar();
+        confirma=tolower(confirma);
+    }
+
+    if(confirma == 's')
+    {
+        retorno = 1;
+    }
+    else
+    {
+        retorno =0;
+    }
+
+    return retorno;
+
+}
 int getStringAlpha(int longMax, int intentos, char* mensaje, char* dondeAsignar)
 {
     int todoOk = 1;

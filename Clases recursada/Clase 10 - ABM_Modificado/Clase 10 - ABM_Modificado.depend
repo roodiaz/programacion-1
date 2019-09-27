@@ -1,0 +1,19 @@
+# depslib dependency file v1.0
+1569279039 source:c:\users\alumno\desktop\abm\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569283528 source:c:\users\alumno\desktop\programacion-1\clases recursada\clase 10 - abm_modificado\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
+1569556435 source:c:\users\rocio\desktop\programacion-1\clases recursada\clase 10 - abm_modificado\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+
