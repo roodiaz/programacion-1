@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1558052836 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.c
+1569719021 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -9,26 +9,26 @@
 	"autos.h"
 	"trabajos.h"
 
-1557965780 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\inputdiaz.h
+1569719021 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\inputdiaz.h
 
-1557965780 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.h
+1569719021 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\autos.h
 
-1557719968 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.h
+1569719021 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.h
 
-1558065236 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\informes.c
+1569719021 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\informes.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
-	<conio.h>
 	<string.h>
+	<conio.h>
 	"inputDiaz.h"
 	"autos.h"
 	"trabajos.h"
 	"informes.h"
 
-1558057377 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\informes.h
+1569719021 c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\informes.h
 
-1557968367 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\inputdiaz.c
+1569719021 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\inputdiaz.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>
@@ -37,7 +37,7 @@
 	<time.h>
 	"inputDiaz.h"
 
-1558065571 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\main.c
+1569719021 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\main.c
 	<stdio.h>
 	<stdlib.h>
 	<string.h>
@@ -47,7 +47,7 @@
 	"trabajos.h"
 	"informes.h"
 
-1558055934 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.c
+1569719021 source:c:\users\rocio\desktop\programacion-1\diaz.rocio.1g\trabajos.c
 	<stdio.h>
 	<stdlib.h>
 	<ctype.h>

@@ -217,7 +217,6 @@ void inicializarAlumnos(eAlumno vec[], int tam)
     }
 }
 
-
 int buscarLibre(eAlumno vec[], int tam)
 {
     int indice = -1;
