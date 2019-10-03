@@ -9,3 +9,5 @@ int getChar(int intentos, char* dondeAsignar, char* mensaje);
 int getFloatRange(float min, float max, float* dondeAsignar, char* mensaje);
 
 int confimarSalir(char mensaje[]);
+
+void getStringAlphaNum(int longMax, char* mensaje, char* dondeAsignar);

@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1570067278 source:c:\users\rocio\desktop\parcialpeliculas\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1570067975 source:c:\users\rocio\desktop\parcialpeliculas\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputDiaz.h"
+	"peliculas.h"
+	"generosActores.h"
+
+1569989862 c:\users\rocio\desktop\parcialpeliculas\inputdiaz.h
+
+1570068180 source:c:\users\rocio\desktop\parcialpeliculas\generosactores.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputDiaz.h"
+	"generosActores.h"
+	"peliculas.h"
+
+1570068254 c:\users\rocio\desktop\parcialpeliculas\generosactores.h
+
+1570068273 c:\users\rocio\desktop\parcialpeliculas\peliculas.h
+	"generosActores.h"
+
+1570068180 source:c:\users\rocio\desktop\parcialpeliculas\peliculas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputDiaz.h"
+	"generosActores.h"
+	"peliculas.h"
+

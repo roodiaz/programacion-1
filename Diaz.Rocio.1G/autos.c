@@ -63,7 +63,7 @@ void mostrarMarcas(eMarca lista[], int tam)
     int cont=0;
 
     system("cls");
-    printf("ID      MARCAS\n");
+    printf(" ID      MARCAS\n");
     printf("--      -------");
     printf("\n\n");
 
@@ -122,7 +122,7 @@ void mostrarColores(eColor lista[], int tam)
     int cont=0;
 
     system("cls");
-    printf("ID      COLOR\n");
+    printf(" ID      COLOR\n");
     printf("--     -------");
     printf("\n\n");
 

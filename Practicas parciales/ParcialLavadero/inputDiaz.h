@@ -9,3 +9,11 @@ int getChar(int intentos, char* dondeAsignar, char* mensaje);
 int getFloatRange(float min, float max, float* dondeAsignar, char* mensaje);
 
 int confimarSalir(char mensaje[]);
+
+void obtenerEmail(char dondeAsignar[], int tamMax, char mensaje []);
+
+void obtenerTelefono(char dondeAsignar[], int tamMax, char mensaje[]);
+
+char obtenerSexo(char mensaje[]);
+
+void obtenerPatente(char* dondeAsigncar, char* mensaje);

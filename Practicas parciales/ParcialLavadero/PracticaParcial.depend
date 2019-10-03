@@ -1,0 +1,67 @@
+# depslib dependency file v1.0
+1569980751 source:c:\users\rocio\desktop\practicaparcial\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1569983391 source:c:\users\rocio\desktop\practicaparcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+
+1569902185 c:\users\rocio\desktop\practicaparcial\inputdiaz.h
+
+1569983977 c:\users\rocio\desktop\practicaparcial\autos.h
+
+1569983977 c:\users\rocio\desktop\practicaparcial\trabajos.h
+
+1569983391 source:c:\users\rocio\desktop\practicaparcial\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+
+1569984203 source:c:\users\rocio\desktop\parciallavadero\autos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+
+1569902185 c:\users\rocio\desktop\parciallavadero\inputdiaz.h
+
+1569983977 c:\users\rocio\desktop\parciallavadero\autos.h
+
+1569983977 c:\users\rocio\desktop\parciallavadero\trabajos.h
+
+1569980751 source:c:\users\rocio\desktop\parciallavadero\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1569983391 source:c:\users\rocio\desktop\parciallavadero\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+
+1569983391 source:c:\users\rocio\desktop\parciallavadero\trabajos.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"inputDiaz.h"
+	"autos.h"
+	"trabajos.h"
+

@@ -1,3 +1,4 @@
+#include "autos.h"
 
 typedef struct
 {
