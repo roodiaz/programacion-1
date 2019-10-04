@@ -35,3 +35,51 @@
 	<stdlib.h>
 	<string.h>
 
+1570226756 source:c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\alumno.c
+	"alumno.h"
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
+1570226756 c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\alumno.h
+	"carrera.h"
+
+1570226756 c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\carrera.h
+
+1570226756 source:c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\carrera.c
+	"carrera.h"
+	<stdio.h>
+	<string.h>
+
+1570230080 source:c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\main.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"alumno.h"
+	"carrera.h"
+	"informes.h"
+
+1570230080 c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\informes.h
+
+1570230098 source:c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"alumno.h"
+	"carrera.h"
+	"informes.h"
+
+1570231388 source:c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\comidas.c
+	<stdio.h>
+	<stdlib.h>
+	<conio.h>
+	<string.h>
+	"alumno.h"
+	"carrera.h"
+	"informes.h"
+	"comidas.h"
+
+1570231388 c:\users\alumno\desktop\programacion-1\clases recursada\clase 13\comidas.h
+
