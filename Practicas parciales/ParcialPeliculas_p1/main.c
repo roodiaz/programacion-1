@@ -5,7 +5,7 @@
 #include "peliculas.h"
 #include "generosActores.h"
 
-#define TAM 12
+#define TAM 15
 #define TAMA 5
 #define TAMG 4
 

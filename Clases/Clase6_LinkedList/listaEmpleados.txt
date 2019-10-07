@@ -1,4 +1,0 @@
-Id  Nombre  Apellido  Sueldo
-
-
-

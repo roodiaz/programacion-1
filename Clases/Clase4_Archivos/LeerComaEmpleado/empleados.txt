@@ -1,3 +1,0 @@
-3,rocio,diaz,15000.00
-2,lucas,sosa,16000.00
-7,abril,saa,17000.00
