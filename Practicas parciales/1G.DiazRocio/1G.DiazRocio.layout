@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_layout_file>
+	<FileVersion major="1" minor="0" />
+	<ActiveTarget name="Debug" />
+	<File name="categoria.h" open="1" top="0" tabpos="5" split="0" active="1" splitpos="0" zoom_1="4" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="316" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="clientes.h" open="1" top="0" tabpos="9" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="152" topLine="9" />
+		</Cursor>
+	</File>
+	<File name="clientes.c" open="1" top="0" tabpos="10" split="0" active="1" splitpos="0" zoom_1="6" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="203" topLine="16" />
+		</Cursor>
+		<Folding>
+			<Collapse line="41" />
+			<Collapse line="57" />
+			<Collapse line="64" />
+			<Collapse line="86" />
+			<Collapse line="117" />
+			<Collapse line="133" />
+			<Collapse line="168" />
+			<Collapse line="195" />
+			<Collapse line="211" />
+			<Collapse line="257" />
+		</Folding>
+	</File>
+	<File name="informes.c" open="1" top="0" tabpos="14" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="3593" topLine="127" />
+		</Cursor>
+	</File>
+	<File name="informes.h" open="1" top="0" tabpos="13" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="472" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="inputDiaz.c" open="1" top="0" tabpos="3" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1012" topLine="46" />
+		</Cursor>
+	</File>
+	<File name="inputDiaz.h" open="1" top="0" tabpos="4" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="0" topLine="0" />
+		</Cursor>
+	</File>
+	<File name="juego.c" open="1" top="0" tabpos="8" split="0" active="1" splitpos="0" zoom_1="3" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1040" topLine="40" />
+		</Cursor>
+	</File>
+	<File name="juego.h" open="1" top="0" tabpos="7" split="0" active="1" splitpos="0" zoom_1="0" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="270" topLine="1" />
+		</Cursor>
+	</File>
+	<File name="alquileres.h" open="1" top="0" tabpos="11" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="360" topLine="10" />
+		</Cursor>
+	</File>
+	<File name="main.c" open="1" top="1" tabpos="2" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="2166" topLine="79" />
+		</Cursor>
+	</File>
+	<File name="alquileres.c" open="1" top="0" tabpos="12" split="0" active="1" splitpos="0" zoom_1="2" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="1189" topLine="47" />
+		</Cursor>
+	</File>
+	<File name="categoria.c" open="1" top="0" tabpos="6" split="0" active="1" splitpos="0" zoom_1="5" zoom_2="0">
+		<Cursor>
+			<Cursor1 position="117" topLine="0" />
+		</Cursor>
+	</File>
+</CodeBlocks_layout_file>
