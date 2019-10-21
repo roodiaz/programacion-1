@@ -142,11 +142,13 @@ void bajaCliente(eCliente vec[], int tam)
 
     indice=buscarClienteId(vec,tam,id);
 
-    while(indice==-1)
+    if(indice==-1)
     {
-        getIntRange(&id,1000,9999,"Ingrese id de cliente valido: ");
+        /*getIntRange(&id,1000,9999,"Ingrese id de cliente valido: ");
 
-        indice=buscarClienteId(vec,tam,id);
+        indice=buscarClienteId(vec,tam,id);*/
+
+        printf("\nEl id ingresado es incorrecto\n\n");
     }
     if(indice !=-1)
     {

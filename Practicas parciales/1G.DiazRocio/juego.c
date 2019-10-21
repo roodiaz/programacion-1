@@ -29,14 +29,15 @@ void mostrarJuego(eJuego juego, eCategoria cat[], int tam)
 
    obtenerNomCat(cat, tam, juego.idCategoria,nombre);
 
-   printf("%d    %10s    %.2f    %10s\n",juego.codigo,juego.descripcion,
+   printf("%d    %10s       %.2f    %10s\n",juego.codigo,juego.descripcion,
           juego.importe,nombre);
 }
 
 void mostrarJuegos(eJuego juego[],int tamJ, eCategoria cat[], int tamC){
 
     system("cls");
-    printf(" ID    DESCRIPCION     IMPORTE     CATEGORIA\n\n");
+    printf("               **** JUEGOS ****\n\n");
+    printf(" ID    DESCRIPCION     IMPORTE        CATEGORIA\n\n");
 
     for(int i=0 ;i<tamJ; i++)
     {

@@ -89,10 +89,11 @@ int main()
                     break;
 
                 case 4 :
-
+                    clientesSinAlquiler(clientes,TAMC,alquiler,TAMA);
                     break;
 
                 case 5 :
+                    juegosSinAlquiler(juegos,TAMJ,alquiler,TAMA,cat,TAMCAT);
                     break;
 
                 case 6 :
