@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="PracticaEmpleado_p1" />
+		<Option title="PeliculasParcial" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/PracticaEmpleado_p1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/PeliculasParcial" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/PracticaEmpleado_p1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/PeliculasParcial" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -31,37 +31,34 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="almuerzos.c">
+		<Unit filename="Actor.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="almuerzos.h" />
-		<Unit filename="empleados.c">
+		<Unit filename="Actor.h" />
+		<Unit filename="Filtros.h" />
+		<Unit filename="Pelicula.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="empleados.h" />
-		<Unit filename="informes.c">
+		<Unit filename="Pelicula.h" />
+		<Unit filename="filtros.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="informes.h" />
-		<Unit filename="inputDiaz.c">
+		<Unit filename="genero.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="inputDiaz.h" />
+		<Unit filename="genero.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="menus.c">
+		<Unit filename="validaciones.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="menus.h" />
-		<Unit filename="sectores.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="sectores.h" />
+		<Unit filename="validaciones.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
+			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

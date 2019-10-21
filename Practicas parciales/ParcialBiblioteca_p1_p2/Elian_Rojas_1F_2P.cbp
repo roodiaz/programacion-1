@@ -2,12 +2,12 @@
 <CodeBlocks_project_file>
 	<FileVersion major="1" minor="6" />
 	<Project>
-		<Option title="PracticaEmpleado_p1" />
+		<Option title="Elian_Rojas_1F_2P" />
 		<Option pch_mode="2" />
 		<Option compiler="gcc" />
 		<Build>
 			<Target title="Debug">
-				<Option output="bin/Debug/PracticaEmpleado_p1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Debug/Elian_Rojas_1F_1P" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Debug/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -16,7 +16,7 @@
 				</Compiler>
 			</Target>
 			<Target title="Release">
-				<Option output="bin/Release/PracticaEmpleado_p1" prefix_auto="1" extension_auto="1" />
+				<Option output="bin/Release/Elian_Rojas_1F_1P" prefix_auto="1" extension_auto="1" />
 				<Option object_output="obj/Release/" />
 				<Option type="1" />
 				<Option compiler="gcc" />
@@ -31,37 +31,22 @@
 		<Compiler>
 			<Add option="-Wall" />
 		</Compiler>
-		<Unit filename="almuerzos.c">
+		<Unit filename="inputElian.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="almuerzos.h" />
-		<Unit filename="empleados.c">
+		<Unit filename="inputElian.h" />
+		<Unit filename="libros.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="empleados.h" />
-		<Unit filename="informes.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="informes.h" />
-		<Unit filename="inputDiaz.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="inputDiaz.h" />
+		<Unit filename="libros.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="menus.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="menus.h" />
-		<Unit filename="sectores.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="sectores.h" />
 		<Extensions>
 			<code_completion />
 			<envvars />
 			<debugger />
+			<lib_finder disable_auto="1" />
 		</Extensions>
 	</Project>
 </CodeBlocks_project_file>

@@ -5,6 +5,7 @@
 #include "sectores.h"
 #include "menus.h"
 #include "almuerzos.h"
+#include "informes.h"
 
 #define TAME 6
 #define TAMA 15
@@ -16,6 +17,7 @@ int menuABM();
 int main()
 {
     int salir;
+    int volver;
     int idEmp=1000;
     int idAlm=10000;
 
@@ -72,6 +74,52 @@ int main()
             break;
 
         case 9:
+            do
+            {
+                switch(menuInformes())
+                {
+                case 1:
+                    total_promedioDeMenues(menu,TAMM);
+                    break;
+                case 2:
+                    total_promedioDeMenues2(menu,TAMM);
+                    break;
+                case 3:
+                    contarCantidadMenusPorEmpleado(alm,TAMA,emp,TAME);
+                    break;
+                case 4:
+
+                    break;
+                case 5:
+
+                    break;
+                case 6:
+
+                    break;
+                case 7:
+
+                    break;
+                case 8:
+
+                    break;
+                case 9:
+
+                    break;
+
+                case 10:
+                    break;
+
+                case 11:
+                    volver=confimarSalir("Volver al menu principal? s/n: ");
+                    break;
+                }
+                printf("\n\n");
+                system("pause");
+            }
+            while(volver != 1);
+
+            break;
+        case 10:
             salir=confimarSalir("\nDesea salir? s/n: ");
             break;
 
@@ -100,8 +148,9 @@ int menuABM()
     printf("5. Alta almuerzo\n");
     printf("6. Listar almuerzos\n");
     printf("7. Listar sectores\n");
-    printf("8. Listar menus\n\n");
-    printf("9. Salir\n\n");
+    printf("8. Listar menus\n");
+    printf("9. Informes\n\n");
+    printf("10. Salir\n\n");
     printf("Ingrese opcion: ");
     scanf("%d",&opcion);
 

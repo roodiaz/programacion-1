@@ -390,3 +390,87 @@
 	<conio.h>
 	"comidas.h"
 
+1570511699 source:c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\almuerzo.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"almuerzo.h"
+	"biblioteca.h"
+
+1570511699 c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\almuerzo.h
+	"comidas.h"
+	"alumno.h"
+	"carrera.h"
+
+1570511699 c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\comidas.h
+
+1570511699 c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\alumno.h
+	"carrera.h"
+
+1570511699 c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\carrera.h
+
+1570511699 c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\biblioteca.h
+	"alumno.h"
+
+1570511699 source:c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\alumno.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"alumno.h"
+	"biblioteca.h"
+
+1570511699 source:c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\biblioteca.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"biblioteca.h"
+
+1570511699 source:c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\carrera.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"carrera.h"
+
+1570511699 source:c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\comidas.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"comidas.h"
+
+1570511699 source:c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\informes.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"Informes.h"
+	"biblioteca.h"
+
+1570511699 c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\informes.h
+	"carrera.h"
+	"alumno.h"
+	"almuerzo.h"
+
+1570511699 source:c:\users\rocio\desktop\programacion-1\clases\clase 13- informesfull\main.c
+	<stdio.h>
+	<stdlib.h>
+	<ctype.h>
+	<string.h>
+	<conio.h>
+	"carrera.h"
+	"alumno.h"
+	"biblioteca.h"
+	"Informes.h"
+	"almuerzo.h"
+	"comidas.h"
+
