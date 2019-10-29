@@ -21,10 +21,10 @@ int main()
         /// define 1
     }
 
-    //fprintf(f,"%s",nombre);
+    //fprintf(f,"%s",nombre); // para escribir .txt
     //puntero a FILE - cadena de carac
 
-    //fwrite(nombre,sizeof(char),strlen(nombre),f);
+    //fwrite(nombre,sizeof(char),strlen(nombre),f); // escribit .bin .txt
     //origen de datos,tamanio de tipo de dato,cantidad de carac,destino donde guardar
 
     while(!feof(f))//feof devuelve 1 o 0 si llega al final del archivo o no
@@ -36,8 +36,8 @@ int main()
          //x= fgetc(f);
          // printf("%c",x);
 
-         //fgets(nombre2,19,f);
-         // printf("%s",nombre2);
+          fgets(nombre2,19,f);
+          printf("%s",nombre2);
 
 
     }

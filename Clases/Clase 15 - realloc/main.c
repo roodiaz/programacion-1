@@ -6,6 +6,7 @@ int main()
     int* num=(int*)malloc(sizeof (int)*5);
     int* aux;
 
+
     for(int i=0; i<5; i++)
     {
         printf("Ingrese un numero: ");
@@ -20,13 +21,13 @@ int main()
 
     }
 
-    aux=(int*)realloc(num,sizeof(int)*5);
+    aux=(int*)realloc(num,sizeof(int)*10);
 
     if(aux!=NULL){
         num=aux;
     }
 
-    for(int i=0; i<5; i++)
+    for(int i=5; i<10; i++)
     {
         printf("Ingrese un numero: ");
         scanf("%d",num+i);
@@ -34,7 +35,7 @@ int main()
 
     printf("\n\n");
 
-    for(int i=0; i<5; i++)
+    for(int i=0; i<10; i++)
     {
         printf("%d\n",*(num+i));
 

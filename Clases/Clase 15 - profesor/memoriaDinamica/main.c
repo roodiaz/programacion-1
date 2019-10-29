@@ -31,6 +31,8 @@ int main()
 
     numeros = (int*) realloc(numeros, sizeof(int)*6);
 
+    printf("\n\n");
+
     for(int i=0; i< 6; i++){
         printf("%d ", *(numeros + i) );
     }

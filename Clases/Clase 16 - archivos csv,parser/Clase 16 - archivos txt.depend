@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1572308638 source:c:\users\alumno\desktop\programacion-1\clases\clase 16 - archivos csv\main.c
+	<stdio.h>
+	<stdlib.h>
+
+1572311886 source:c:\users\alumno\desktop\programacion-1\clases\clase 16 - archivos csv,parser\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
