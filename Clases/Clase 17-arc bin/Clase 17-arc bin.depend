@@ -1,0 +1,6 @@
+# depslib dependency file v1.0
+1572656885 source:c:\users\alumno\desktop\programacion-1\clases\clase 17-arc bin\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+
