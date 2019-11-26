@@ -1,0 +1,44 @@
+# depslib dependency file v1.0
+1574721474 source:e:\2do parcial\linkedlist.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"LinkedList.h"
+
+1574721474 e:\2do parcial\linkedlist.h
+
+1574727758 source:e:\2do parcial\mascotas.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"mascotas.h"
+	"LinkedList.h"
+
+1573528070 source:e:\2do parcial\inputdiaz.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	<conio.h>
+	<ctype.h>
+
+1574727634 source:e:\2do parcial\main.c
+	<stdio.h>
+	<stdlib.h>
+	"inputDiaz.h"
+	"LinkedList.h"
+	"parser.h"
+	"mascotas.h"
+
+1573528070 e:\2do parcial\inputdiaz.h
+
+1574725746 e:\2do parcial\parser.h
+
+1574724446 e:\2do parcial\mascotas.h
+	"LinkedList.h"
+
+1574727496 source:e:\2do parcial\parser.c
+	<stdio.h>
+	<stdlib.h>
+	"LinkedList.h"
+	"mascotas.h"
+
